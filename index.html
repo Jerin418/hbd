@@ -139,20 +139,6 @@
             100% { opacity: 0; transform: translateY(-55px) scale(2) translateX(-8px); }
         }
 
-        /* Polaroid Card Styling & 3D Tilt */
-        .polaroid-card {
-            background: #fdfbf7;
-            padding: 14px 14px 26px 14px;
-            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.6), 0 0 25px rgba(255, 42, 133, 0.08);
-            transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
-            transform-style: preserve-3d;
-        }
-
-        .polaroid-card:hover {
-            box-shadow: 0 28px 45px -10px rgba(0, 0, 0, 0.75), 0 0 30px rgba(251, 191, 36, 0.25);
-            z-index: 20;
-        }
-
         /* 3D Flip Greeting Card */
         .perspective-container {
             perspective: 1400px;
@@ -239,25 +225,8 @@
                 <i data-lucide="sparkles" class="w-4 h-4 text-pink-400"></i>
                 <span class="hidden md:inline">Confetti</span>
             </button>
-
-            <!-- Customize Gear Button (Hidden in Share View) -->
-            <button id="customize-trigger-btn" onclick="openCustomizeModal()" class="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white p-2 sm:px-4 sm:py-2 rounded-full flex items-center gap-2 text-xs sm:text-sm font-semibold shadow-lg shadow-pink-500/25 transition-all active:scale-95" title="Customize Page for Your Friend">
-                <i data-lucide="settings" class="w-4 h-4 animate-spin-slow"></i>
-                <span class="hidden sm:inline">Customize</span>
-            </button>
         </div>
     </header>
-
-    <!-- Share Preview Banner (Only shown when creator toggles Share Preview mode) -->
-    <div id="share-mode-banner" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 z-50 glass-pill px-5 py-2.5 rounded-full flex items-center gap-3 shadow-2xl border border-amber-400/40 bg-slate-900/90">
-        <span class="text-xs sm:text-sm text-amber-200 flex items-center gap-1.5">
-            <i data-lucide="eye" class="w-4 h-4 text-amber-400"></i>
-            Previewing Friend View (Edit button hidden)
-        </span>
-        <button onclick="exitSharePreview()" class="text-xs font-bold uppercase tracking-wider bg-amber-400 text-slate-950 px-3 py-1 rounded-full hover:bg-amber-300 transition">
-            Exit Preview
-        </button>
-    </div>
 
     <!-- ========================================== -->
     <!-- 1. HERO SECTION                            -->
@@ -611,30 +580,7 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 3. MEMORY LANE / POLAROID GALLERY          -->
-    <!-- ========================================== -->
-    <section id="memories-section" class="py-20 sm:py-28 px-4 relative">
-        <div class="max-w-6xl mx-auto">
-            
-            <!-- Section Heading -->
-            <div class="text-center mb-14">
-                <span class="text-xs font-bold uppercase tracking-widest text-pink-400 bg-pink-400/10 border border-pink-400/20 px-3.5 py-1.5 rounded-full">Snapshots in Time</span>
-                <h2 class="font-display text-3xl sm:text-5xl font-extrabold mt-4 mb-3">Walk Down Memory Lane</h2>
-                <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-                    A few of my absolute favorite moments with you. Hover or tap on each polaroid to tilt and inspect!
-                </p>
-            </div>
-
-            <!-- Polaroid Grid -->
-            <div id="polaroid-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-7 px-2 sm:px-0">
-                <!-- Dynamically populated by JS from config data -->
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ========================================== -->
-    <!-- 4. PERSONALIZED 3D FLIP MESSAGE CARD       -->
+    <!-- 3. PERSONALIZED 3D FLIP MESSAGE CARD       -->
     <!-- ========================================== -->
     <section id="message-section" class="py-20 sm:py-28 px-4 relative">
         <div class="max-w-2xl mx-auto">
@@ -725,101 +671,6 @@
         </div>
     </footer>
 
-    <!-- ========================================== -->
-    <!-- 5. BUILT-IN CUSTOMIZATION MODAL            -->
-    <!-- ========================================== -->
-    <div id="customize-modal" class="fixed inset-0 z-50 hidden bg-black/75 backdrop-blur-md flex items-center justify-center p-3 sm:p-6">
-        <div class="glass-card bg-slate-900/95 border border-white/20 rounded-3xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
-            
-            <!-- Modal Header -->
-            <div class="px-6 py-4 border-b border-white/10 flex justify-between items-center bg-white/5">
-                <div class="flex items-center gap-2.5">
-                    <div class="p-2 rounded-xl bg-pink-500/20 text-pink-400">
-                        <i data-lucide="sliders" class="w-5 h-5"></i>
-                    </div>
-                    <div>
-                        <h3 class="font-display font-bold text-lg text-white">Customize Birthday Page</h3>
-                        <p class="text-xs text-slate-400">Personalize names, messages, and photos, then share or download!</p>
-                    </div>
-                </div>
-                <button onclick="closeCustomizeModal()" class="p-2 rounded-full hover:bg-white/10 text-slate-400 hover:text-white transition">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-
-            <!-- Modal Body (Scrollable Form) -->
-            <div class="p-6 overflow-y-auto space-y-6 text-sm">
-                
-                <!-- Basic Details -->
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-pink-300 mb-1.5">Friend's Name</label>
-                        <input type="text" id="input-friend-name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-white/15 text-white focus:outline-none focus:border-pink-500" placeholder="e.g., Sarah">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-pink-300 mb-1.5">From (Your Name)</label>
-                        <input type="text" id="input-sender-name" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-white/15 text-white focus:outline-none focus:border-pink-500" placeholder="e.g., Jordan">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-pink-300 mb-1.5">Badge / Age Tag</label>
-                        <input type="text" id="input-age-badge" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-white/15 text-white focus:outline-none focus:border-pink-500" placeholder="e.g., SWEET 21!">
-                    </div>
-                </div>
-
-                <!-- Hero Subtitle & Hidden Cake Wish -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-amber-300 mb-1.5">Hero Subtitle Greeting</label>
-                        <textarea id="input-hero-subtitle" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-white/15 text-white focus:outline-none focus:border-amber-400"></textarea>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold uppercase tracking-wider text-amber-300 mb-1.5">Hidden Cake Wish (Revealed on Blow Out)</label>
-                        <textarea id="input-cake-wish" rows="3" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-white/15 text-white focus:outline-none focus:border-amber-400"></textarea>
-                    </div>
-                </div>
-
-                <!-- Personal Greeting Card Note -->
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-purple-300 mb-1.5">Personalized Letter Message (Inside Flip Card)</label>
-                    <textarea id="input-card-message" rows="4" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-800/90 border border-white/15 text-white focus:outline-none focus:border-purple-400"></textarea>
-                </div>
-
-                <!-- Polaroid Memories Customization -->
-                <div>
-                    <label class="block text-xs font-semibold uppercase tracking-wider text-cyan-300 mb-3">Memory Lane Polaroids (Captions, Dates & Image URLs)</label>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="customize-memories-container">
-                        <!-- Generated dynamically via JS -->
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Modal Footer Actions -->
-            <div class="px-6 py-4 border-t border-white/10 bg-slate-950/80 flex flex-wrap justify-between items-center gap-3">
-                <div class="flex flex-wrap items-center gap-2">
-                    <button onclick="enableSharePreview()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-amber-300 text-xs font-semibold transition">
-                        <i data-lucide="eye" class="w-4 h-4"></i>
-                        <span>Toggle Share View</span>
-                    </button>
-                    <button onclick="copyCustomizedHTML()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-cyan-300 text-xs font-semibold transition">
-                        <i data-lucide="copy" class="w-4 h-4"></i>
-                        <span id="copy-html-btn-text">Copy Updated HTML</span>
-                    </button>
-                    <button onclick="downloadCustomizedHTML()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/15 text-emerald-300 text-xs font-semibold transition">
-                        <i data-lucide="download" class="w-4 h-4"></i>
-                        <span>Download HTML File</span>
-                    </button>
-                </div>
-
-                <button onclick="saveCustomizations()" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-400 hover:to-purple-500 text-white font-semibold text-sm shadow-lg shadow-pink-500/25 transition">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                    <span>Apply Changes</span>
-                </button>
-            </div>
-
-        </div>
-    </div>
-
     <!-- Custom Toast Notification -->
     <div id="toast-notification" class="fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-pill bg-slate-900/95 border border-pink-500/40 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-sm text-white">
         <i data-lucide="sparkles" class="w-4 h-4 text-pink-400"></i>
@@ -830,41 +681,15 @@
     <!-- APPLICATION LOGIC & INTERACTIVITY          -->
     <!-- ========================================== -->
     <script id="app-config-script">
-        // Default Birthday Data Configuration (Automatically updated when exporting HTML)
-        window.BIRTHDAY_CONFIG = window.BIRTHDAY_CONFIG || {
+        // Easy-to-edit Birthday Data Configuration:
+        // Edit these values directly in the code to personalize for your friend!
+        window.BIRTHDAY_CONFIG = {
             friendName: "Alex",
             senderName: "Your Best Friend",
             ageBadge: "24 & ICONIC!",
             heroSubtitle: "Here’s to another year of unforgettable adventures, late-night laughs, and making the absolute best memories together!",
             cakeWish: "May this year bring you closer to your biggest dreams, surround you with people who cherish you, and fill your days with spontaneous joy and adventure!",
-            cardMessage: "Thank you for being the kind of friend who makes every ordinary day feel like a celebration. Whether we're laughing over the most random things or supporting each other through life's curveballs, I'm so grateful to have you in my corner.\n\nI hope this new chapter brings you endless happiness, good health, and wild success!",
-            shareMode: false,
-            memories: [
-                {
-                    caption: "Sunset Roadtrip Vibes",
-                    date: "Summer '24",
-                    imageUrl: "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=600&q=80",
-                    rotation: "-rotate-2"
-                },
-                {
-                    caption: "Coffee & Non-Stop Laughs",
-                    date: "October '24",
-                    imageUrl: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80",
-                    rotation: "rotate-2"
-                },
-                {
-                    caption: "Midnight Pizza Run",
-                    date: "New Year's Eve",
-                    imageUrl: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=600&q=80",
-                    rotation: "-rotate-1"
-                },
-                {
-                    caption: "Unforgettable Concert Night",
-                    date: "Spring '25",
-                    imageUrl: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80",
-                    rotation: "rotate-3"
-                }
-            ]
+            cardMessage: "Thank you for being the kind of friend who makes every ordinary day feel like a celebration. Whether we're laughing over the most random things or supporting each other through life's curveballs, I'm so grateful to have you in my corner.\n\nI hope this new chapter brings you endless happiness, good health, and wild success!"
         };
     </script>
 
@@ -884,12 +709,6 @@
         // INITIALIZATION & RENDERING
         // ==========================================
         window.addEventListener('DOMContentLoaded', () => {
-            // Check URL params for ?share=1
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('share') === '1') {
-                window.BIRTHDAY_CONFIG.shareMode = true;
-            }
-
             renderPageContent();
             initConfettiCanvas();
             lucide.createIcons();
@@ -914,58 +733,6 @@
             document.getElementById('card-message-body').textContent = cfg.cardMessage;
             document.getElementById('card-sender-display').textContent = cfg.senderName;
             document.getElementById('footer-friend-name').textContent = cfg.friendName;
-
-            // Share View Visibility
-            const customizeBtn = document.getElementById('customize-trigger-btn');
-            if (cfg.shareMode) {
-                customizeBtn.classList.add('hidden');
-            } else {
-                customizeBtn.classList.remove('hidden');
-            }
-
-            // Render Polaroid Gallery
-            const grid = document.getElementById('polaroid-grid');
-            grid.innerHTML = '';
-
-            cfg.memories.forEach((mem, index) => {
-                const rotationClass = mem.rotation || (index % 2 === 0 ? '-rotate-2' : 'rotate-2');
-                const card = document.createElement('div');
-                card.className = `polaroid-card rounded-xl ${rotationClass} cursor-pointer group select-none`;
-                
-                // Interactive 3D mouse tilt effect
-                card.addEventListener('mousemove', (e) => {
-                    const rect = card.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-                    const rotateX = ((y - centerY) / centerY) * -8;
-                    const rotateY = ((x - centerX) / centerX) * 8;
-                    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.04)`;
-                });
-
-                card.addEventListener('mouseleave', () => {
-                    card.style.transform = '';
-                });
-
-                const fallbackImg = `https://placehold.co/600x600/1e1b4b/f472b6?text=Memory+${index + 1}`;
-
-                card.innerHTML = `
-                    <div class="relative aspect-square w-full overflow-hidden rounded-lg bg-slate-200 mb-4">
-                        <img src="${mem.imageUrl}" 
-                             alt="${mem.caption}" 
-                             onerror="this.onerror=null;this.src='${fallbackImg}';"
-                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-2.5 right-2.5 bg-black/60 backdrop-blur-md text-white text-[11px] font-medium px-2.5 py-0.5 rounded-full">
-                            ${mem.date}
-                        </div>
-                    </div>
-                    <p class="font-handwriting text-2xl text-slate-800 text-center font-bold leading-tight px-1">
-                        ${mem.caption}
-                    </p>
-                `;
-                grid.appendChild(card);
-            });
         }
 
         // ==========================================
@@ -1369,141 +1136,6 @@
             setTimeout(() => {
                 launchConfetti({ particleCount: 95, originX: 0.5, originY: 0.35 });
             }, 350);
-        }
-
-        // ==========================================
-        // 5. CUSTOMIZATION MODAL & EXPORT STUDIO
-        // ==========================================
-        function openCustomizeModal() {
-            const cfg = window.BIRTHDAY_CONFIG;
-            document.getElementById('input-friend-name').value = cfg.friendName;
-            document.getElementById('input-sender-name').value = cfg.senderName;
-            document.getElementById('input-age-badge').value = cfg.ageBadge;
-            document.getElementById('input-hero-subtitle').value = cfg.heroSubtitle;
-            document.getElementById('input-cake-wish').value = cfg.cakeWish;
-            document.getElementById('input-card-message').value = cfg.cardMessage;
-
-            const memContainer = document.getElementById('customize-memories-container');
-            memContainer.innerHTML = '';
-
-            cfg.memories.forEach((mem, idx) => {
-                const block = document.createElement('div');
-                block.className = "p-3.5 rounded-2xl bg-slate-800/60 border border-white/10 space-y-2.5";
-                block.innerHTML = `
-                    <div class="flex justify-between items-center text-xs font-bold text-cyan-300">
-                        <span>Polaroid #${idx + 1}</span>
-                    </div>
-                    <div>
-                        <label class="block text-[11px] text-slate-400 mb-1">Caption</label>
-                        <input type="text" id="mem-caption-${idx}" value="${mem.caption.replace(/"/g, '&quot;')}" class="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-white/10 text-white text-xs">
-                    </div>
-                    <div class="grid grid-cols-2 gap-2">
-                        <div>
-                            <label class="block text-[11px] text-slate-400 mb-1">Date / Tag</label>
-                            <input type="text" id="mem-date-${idx}" value="${mem.date.replace(/"/g, '&quot;')}" class="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-white/10 text-white text-xs">
-                        </div>
-                        <div>
-                            <label class="block text-[11px] text-slate-400 mb-1">Photo URL</label>
-                            <input type="text" id="mem-url-${idx}" value="${mem.imageUrl.replace(/"/g, '&quot;')}" class="w-full px-3 py-1.5 rounded-lg bg-slate-900 border border-white/10 text-white text-xs">
-                        </div>
-                    </div>
-                `;
-                memContainer.appendChild(block);
-            });
-
-            document.getElementById('customize-modal').classList.remove('hidden');
-        }
-
-        function closeCustomizeModal() {
-            document.getElementById('customize-modal').classList.add('hidden');
-        }
-
-        function readFormIntoConfig() {
-            const cfg = window.BIRTHDAY_CONFIG;
-            cfg.friendName = document.getElementById('input-friend-name').value.trim() || "Friend";
-            cfg.senderName = document.getElementById('input-sender-name').value.trim() || "Your Friend";
-            cfg.ageBadge = document.getElementById('input-age-badge').value.trim() || "HAPPY B-DAY!";
-            cfg.heroSubtitle = document.getElementById('input-hero-subtitle').value.trim();
-            cfg.cakeWish = document.getElementById('input-cake-wish').value.trim();
-            cfg.cardMessage = document.getElementById('input-card-message').value.trim();
-
-            cfg.memories.forEach((mem, idx) => {
-                const capEl = document.getElementById(`mem-caption-${idx}`);
-                const dateEl = document.getElementById(`mem-date-${idx}`);
-                const urlEl = document.getElementById(`mem-url-${idx}`);
-                if (capEl) mem.caption = capEl.value.trim() || `Memory #${idx + 1}`;
-                if (dateEl) mem.date = dateEl.value.trim() || "Special Day";
-                if (urlEl) mem.imageUrl = urlEl.value.trim();
-            });
-        }
-
-        function saveCustomizations() {
-            readFormIntoConfig();
-            renderPageContent();
-            closeCustomizeModal();
-            triggerCelebrationBurst();
-            showToast(`Updated birthday page for ${window.BIRTHDAY_CONFIG.friendName}!`);
-        }
-
-        function enableSharePreview() {
-            readFormIntoConfig();
-            window.BIRTHDAY_CONFIG.shareMode = true;
-            renderPageContent();
-            closeCustomizeModal();
-            document.getElementById('share-mode-banner').classList.remove('hidden');
-        }
-
-        function exitSharePreview() {
-            window.BIRTHDAY_CONFIG.shareMode = false;
-            renderPageContent();
-            document.getElementById('share-mode-banner').classList.add('hidden');
-        }
-
-        function generateExportableHTML() {
-            readFormIntoConfig();
-            const exportConfig = JSON.parse(JSON.stringify(window.BIRTHDAY_CONFIG));
-            exportConfig.shareMode = true; // Hide customize button for the recipient
-
-            // Clone current document and embed the updated config JSON
-            const configScript = document.getElementById('app-config-script');
-            const originalScriptContent = configScript.innerHTML;
-            configScript.innerHTML = `\nwindow.BIRTHDAY_CONFIG = ${JSON.stringify(exportConfig, null, 4)};\n`;
-
-            const fullHTML = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
-            configScript.innerHTML = originalScriptContent;
-            return fullHTML;
-        }
-
-        function copyCustomizedHTML() {
-            const htmlContent = generateExportableHTML();
-            const textarea = document.createElement('textarea');
-            textarea.value = htmlContent;
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand('copy');
-            document.body.removeChild(textarea);
-
-            const btnText = document.getElementById('copy-html-btn-text');
-            btnText.textContent = "Copied to Clipboard!";
-            showToast("Updated HTML copied! Ready to send to your friend 🎉");
-            setTimeout(() => {
-                btnText.textContent = "Copy Updated HTML";
-            }, 2500);
-        }
-
-        function downloadCustomizedHTML() {
-            const htmlContent = generateExportableHTML();
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            const safeName = window.BIRTHDAY_CONFIG.friendName.toLowerCase().replace(/[^a-z0-9]/g, '_');
-            a.href = url;
-            a.download = `happy_birthday_${safeName}.html`;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
-            showToast("Downloaded personalized Birthday HTML file!");
         }
 
         function showToast(message) {
