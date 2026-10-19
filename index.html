@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday to Someone Special ✨</title>
+    <title>Happy Birthday ✨</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -34,15 +34,15 @@
                     keyframes: {
                         float: {
                             '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-                            '50%': { transform: 'translateY(-18px) rotate(3deg)' },
+                            '50%': { transform: 'translateY(-18px) rotate(2deg)' },
                         },
                         pulseGlow: {
-                            '0%, 100%': { opacity: '0.7', transform: 'scale(1)' },
-                            '50%': { opacity: '1', transform: 'scale(1.07)' },
+                            '0%, 100%': { opacity: '0.75', transform: 'scale(1)' },
+                            '50%': { opacity: '1', transform: 'scale(1.06)' },
                         },
                         twinkle: {
                             '0%, 100%': { opacity: '0.2', transform: 'scale(0.8)' },
-                            '50%': { opacity: '0.9', transform: 'scale(1.2)' },
+                            '50%': { opacity: '0.95', transform: 'scale(1.25)' },
                         }
                     }
                 }
@@ -51,44 +51,44 @@
     </script>
 
     <style>
-        /* Custom Midnight Velvet & Rose Gold Romantic Theme */
+        /* Custom Starlit Midnight & Warm Amber/Lavender Theme */
         :root {
-            --rose-pink: #fb7185;
-            --blush-pink: #fda4af;
-            --champagne-gold: #fde68a;
-            --velvet-Plum: #160714;
+            --starlight-gold: #fde68a;
+            --warm-amber: #fbbf24;
+            --soft-lavender: #c4b5fd;
+            --midnight-navy: #090b16;
         }
 
         body {
-            background-color: #120510;
+            background-color: #090b16;
             background-image: 
-                radial-gradient(at 15% 15%, rgba(244, 63, 94, 0.18) 0px, transparent 48%),
-                radial-gradient(at 85% 20%, rgba(217, 70, 239, 0.14) 0px, transparent 50%),
-                radial-gradient(at 50% 60%, rgba(251, 191, 36, 0.08) 0px, transparent 55%),
-                radial-gradient(at 80% 90%, rgba(251, 113, 133, 0.16) 0px, transparent 48%);
+                radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.16) 0px, transparent 48%),
+                radial-gradient(at 85% 20%, rgba(168, 85, 247, 0.13) 0px, transparent 50%),
+                radial-gradient(at 50% 58%, rgba(251, 191, 36, 0.09) 0px, transparent 55%),
+                radial-gradient(at 80% 88%, rgba(251, 146, 60, 0.11) 0px, transparent 48%);
             background-attachment: fixed;
-            color: #fff1f2;
+            color: #f8fafc;
             overflow-x: hidden;
         }
 
         /* Glassmorphism Utilities */
         .glass-card {
-            background: rgba(255, 241, 242, 0.04);
+            background: rgba(255, 255, 255, 0.035);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(251, 113, 133, 0.18);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(253, 230, 138, 0.14);
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
 
         .glass-pill {
-            background: rgba(255, 228, 230, 0.07);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(251, 113, 133, 0.22);
+            border: 1px solid rgba(196, 181, 253, 0.2);
         }
 
-        /* Animated Rose-Gold & Blush Shimmer Text */
-        .text-gradient-romantic {
-            background: linear-gradient(to right, #fda4af, #fb7185, #fde68a, #f472b6, #fda4af);
+        /* Animated Starlight Gold & Lavender Shimmer Text */
+        .text-gradient-starlight {
+            background: linear-gradient(to right, #fde68a, #fbbf24, #c4b5fd, #fdba74, #fde68a);
             background-size: 200% auto;
             color: transparent;
             -webkit-background-clip: text;
@@ -117,7 +117,7 @@
         .candle-flame {
             animation: flicker 1.5s ease-in-out infinite alternate;
             transform-origin: 50% 90%;
-            filter: drop-shadow(0 0 10px #fbbf24) drop-shadow(0 0 22px #f43f5e);
+            filter: drop-shadow(0 0 10px #fbbf24) drop-shadow(0 0 22px #f59e0b);
         }
 
         @keyframes flicker {
@@ -176,34 +176,34 @@
             transform: rotateY(180deg);
         }
 
-        /* Adore Mini Flip/Reveal Cards */
-        .adore-card {
+        /* Interactive "One of a Kind" Cards */
+        .kind-card {
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
-        .adore-card:hover {
+        .kind-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(251, 113, 133, 0.5);
-            box-shadow: 0 20px 45px rgba(244, 63, 94, 0.2);
+            border-color: rgba(251, 191, 36, 0.45);
+            box-shadow: 0 20px 45px rgba(251, 191, 36, 0.12);
         }
 
-        /* Floating Heart Balloons in Hero */
-        .heart-balloon {
+        /* Floating Sky Lanterns / Stars in Hero */
+        .sky-lantern {
             position: absolute;
             pointer-events: auto;
             cursor: pointer;
             transition: transform 0.25s ease, opacity 0.25s ease;
             user-select: none;
         }
-        .heart-balloon:hover {
+        .sky-lantern:hover {
             transform: scale(1.16) !important;
         }
 
-        /* Floating Compliment Pill on Pop */
+        /* Floating Compliment Pill on Tap */
         .floating-compliment {
             position: fixed;
             pointer-events: none;
             z-index: 60;
-            animation: floatUpFade 2.4s ease-out forwards;
+            animation: floatUpFade 2.5s ease-out forwards;
         }
 
         @keyframes floatUpFade {
@@ -218,52 +218,53 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #120510;
+            background: #090b16;
         }
         ::-webkit-scrollbar-thumb {
-            background: #4c1d3d;
+            background: #312e81;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #fb7185;
+            background: #fbbf24;
         }
     </style>
 </head>
-<body class="min-h-screen selection:bg-rose-500 selection:text-white relative">
+<body class="min-h-screen selection:bg-amber-400 selection:text-slate-950 relative">
 
-    <!-- Fullscreen Heart & Starlight Confetti Canvas -->
+    <!-- Fullscreen Starlight & Gold Sparkle Canvas -->
     <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50 w-full h-full"></canvas>
 
     <!-- Subtle Ambient Twinkling Stars Background -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="w-1.5 h-1.5 rounded-full bg-amber-200 absolute top-[14%] left-[22%] animate-twinkle"></div>
-        <div class="w-1 h-1 rounded-full bg-rose-300 absolute top-[28%] right-[18%] animate-twinkle" style="animation-delay: 1.2s"></div>
+        <div class="w-1 h-1 rounded-full bg-indigo-300 absolute top-[28%] right-[18%] animate-twinkle" style="animation-delay: 1.2s"></div>
         <div class="w-2 h-2 rounded-full bg-amber-100 absolute top-[65%] left-[12%] animate-twinkle" style="animation-delay: 2.5s"></div>
-        <div class="w-1.5 h-1.5 rounded-full bg-pink-200 absolute top-[75%] right-[24%] animate-twinkle" style="animation-delay: 0.7s"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-violet-200 absolute top-[75%] right-[24%] animate-twinkle" style="animation-delay: 0.7s"></div>
         <div class="w-1 h-1 rounded-full bg-amber-200 absolute top-[42%] left-[82%] animate-twinkle" style="animation-delay: 1.9s"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-orange-200 absolute top-[19%] left-[68%] animate-twinkle" style="animation-delay: 3.1s"></div>
     </div>
 
     <!-- Floating Navigation & Quick Actions -->
     <header class="fixed top-0 left-0 right-0 z-40 px-4 py-3 sm:px-8 sm:py-4 flex justify-between items-center pointer-events-none">
-        <!-- Romantic Badge -->
+        <!-- Starlit Badge -->
         <div class="glass-pill px-4 py-2 rounded-full flex items-center gap-2.5 pointer-events-auto shadow-lg">
-            <span class="w-2 h-2 rounded-full bg-rose-400 animate-ping"></span>
-            <i data-lucide="heart" class="w-3.5 h-3.5 text-rose-400 fill-rose-400"></i>
-            <span class="text-xs sm:text-sm font-medium tracking-wide text-rose-100" id="nav-badge-text">For Someone Special</span>
+            <span class="w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
+            <i data-lucide="moon-star" class="w-3.5 h-3.5 text-amber-300"></i>
+            <span class="text-xs sm:text-sm font-medium tracking-wide text-slate-100" id="nav-badge-text">Birthday Edition ✨</span>
         </div>
 
         <!-- Quick Controls -->
         <div class="flex items-center gap-2.5 pointer-events-auto">
             <!-- Music Box Melody Toggle Button -->
-            <button id="header-music-btn" onclick="toggleBirthdayMelody()" class="glass-pill hover:bg-rose-500/20 text-rose-50 px-3.5 py-2 rounded-full flex items-center gap-2 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Play Romantic Music Box Melody">
-                <i data-lucide="music" class="w-4 h-4 text-amber-200"></i>
+            <button id="header-music-btn" onclick="toggleBirthdayMelody()" class="glass-pill hover:bg-amber-400/15 text-slate-100 px-3.5 py-2 rounded-full flex items-center gap-2 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Play Music Box Melody">
+                <i data-lucide="music" class="w-4 h-4 text-amber-300"></i>
                 <span id="music-btn-label" class="hidden sm:inline">Play Melody</span>
             </button>
 
-            <!-- Send Hearts & Sparkles Button -->
-            <button onclick="triggerHeartShower()" class="glass-pill hover:bg-rose-500/20 text-rose-50 p-2 sm:px-3.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Send Hearts & Sparkles">
-                <i data-lucide="sparkles" class="w-4 h-4 text-rose-300"></i>
-                <span class="hidden md:inline">Send Hearts</span>
+            <!-- Sparkle Burst Button -->
+            <button onclick="triggerSparkleShower()" class="glass-pill hover:bg-violet-400/15 text-slate-100 p-2 sm:px-3.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Send Starlight Sparkles">
+                <i data-lucide="sparkles" class="w-4 h-4 text-violet-300"></i>
+                <span class="hidden md:inline">Sparkles</span>
             </button>
         </div>
     </header>
@@ -273,71 +274,76 @@
     <!-- ========================================== -->
     <section class="relative min-h-screen flex flex-col justify-center items-center px-4 pt-24 pb-16 overflow-hidden select-none">
         
-        <!-- Interactive Floating Heart Balloons Background -->
-        <div id="balloon-container" class="absolute inset-0 overflow-hidden pointer-events-none">
-            <!-- Heart Balloon 1 (Left Top) -->
-            <div onclick="popHeartBalloon(this, event, 0, '#fb7185')" class="heart-balloon animate-float-slow left-[5%] top-[16%] sm:left-[10%] sm:top-[20%]" title="Tap for a secret compliment!">
-                <svg class="w-16 h-24 sm:w-24 sm:h-32 drop-shadow-[0_0_20px_rgba(251,113,133,0.55)]" viewBox="0 0 100 130" fill="none">
-                    <path d="M50 88 C50 88 12 62 12 34 C12 18 25 8 38 8 C46 8 50 14 50 18 C50 14 54 8 62 8 C75 8 88 18 88 34 C88 62 50 88 50 88 Z" fill="url(#hGrad1)"/>
-                    <ellipse cx="32" cy="26" rx="6" ry="10" transform="rotate(-25 32 26)" fill="white" fill-opacity="0.4"/>
-                    <polygon points="46,87 54,87 56,93 44,93" fill="#e11d48"/>
-                    <path d="M50 93 Q 44 108, 52 124" stroke="rgba(255,228,230,0.45)" stroke-width="1.5" fill="none"/>
+        <!-- Interactive Floating Sky Lanterns & Stars Background -->
+        <div id="lantern-container" class="absolute inset-0 overflow-hidden pointer-events-none">
+            
+            <!-- Sky Lantern 1 (Left Top - Warm Amber Lantern) -->
+            <div onclick="popSkyLantern(this, event, 0, '#fbbf24')" class="sky-lantern animate-float-slow left-[5%] top-[16%] sm:left-[10%] sm:top-[20%]" title="Tap for a little note!">
+                <svg class="w-16 h-24 sm:w-22 sm:h-32 drop-shadow-[0_0_24px_rgba(251,191,36,0.5)]" viewBox="0 0 100 130" fill="none">
+                    <!-- Lantern Body -->
+                    <path d="M26 28 C26 14 74 14 74 28 L66 84 C66 92 34 92 34 84 Z" fill="url(#lanternGrad1)"/>
+                    <!-- Inner Core Flame Glow -->
+                    <circle cx="50" cy="64" r="14" fill="#fef08a" opacity="0.75"/>
+                    <path d="M50 52 C45 60 46 69 50 72 C54 69 55 60 50 52 Z" fill="#ffffff"/>
+                    <!-- Lantern Frame Lines -->
+                    <path d="M36 20 L40 87 M64 20 L60 87" stroke="rgba(120,53,15,0.35)" stroke-width="1.5"/>
+                    <ellipse cx="50" cy="86" rx="16" ry="4" fill="#b45309"/>
+                    <!-- Hanging Tassel -->
+                    <path d="M50 90 Q 47 106, 51 120" stroke="#fde68a" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
                     <defs>
-                        <radialGradient id="hGrad1" cx="35%" cy="30%" r="70%">
-                            <stop offset="0%" stop-color="#fda4af"/>
-                            <stop offset="55%" stop-color="#f43f5e"/>
-                            <stop offset="100%" stop-color="#9f1239"/>
-                        </radialGradient>
-                    </defs>
-                </svg>
-            </div>
-
-            <!-- Heart Balloon 2 (Right Top) -->
-            <div onclick="popHeartBalloon(this, event, 1, '#f472b6')" class="heart-balloon animate-float-medium right-[6%] top-[15%] sm:right-[12%] sm:top-[18%]" title="Tap for a secret compliment!">
-                <svg class="w-16 h-24 sm:w-24 sm:h-32 drop-shadow-[0_0_20px_rgba(244,114,182,0.55)]" viewBox="0 0 100 130" fill="none">
-                    <path d="M50 88 C50 88 12 62 12 34 C12 18 25 8 38 8 C46 8 50 14 50 18 C50 14 54 8 62 8 C75 8 88 18 88 34 C88 62 50 88 50 88 Z" fill="url(#hGrad2)"/>
-                    <ellipse cx="32" cy="26" rx="6" ry="10" transform="rotate(-25 32 26)" fill="white" fill-opacity="0.4"/>
-                    <polygon points="46,87 54,87 56,93 44,93" fill="#be185d"/>
-                    <path d="M50 93 Q 56 108, 48 124" stroke="rgba(255,228,230,0.45)" stroke-width="1.5" fill="none"/>
-                    <defs>
-                        <radialGradient id="hGrad2" cx="35%" cy="30%" r="70%">
-                            <stop offset="0%" stop-color="#fbcfe8"/>
-                            <stop offset="55%" stop-color="#ec4899"/>
-                            <stop offset="100%" stop-color="#831843"/>
-                        </radialGradient>
-                    </defs>
-                </svg>
-            </div>
-
-            <!-- Heart Balloon 3 (Left Bottom) -->
-            <div onclick="popHeartBalloon(this, event, 2, '#fbbf24')" class="heart-balloon animate-float-fast left-[10%] bottom-[15%] sm:left-[16%] sm:bottom-[18%]" title="Tap for a secret compliment!">
-                <svg class="w-14 h-20 sm:w-20 sm:h-28 drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]" viewBox="0 0 100 130" fill="none">
-                    <path d="M50 88 C50 88 12 62 12 34 C12 18 25 8 38 8 C46 8 50 14 50 18 C50 14 54 8 62 8 C75 8 88 18 88 34 C88 62 50 88 50 88 Z" fill="url(#hGrad3)"/>
-                    <ellipse cx="32" cy="26" rx="6" ry="10" transform="rotate(-25 32 26)" fill="white" fill-opacity="0.45"/>
-                    <polygon points="46,87 54,87 56,93 44,93" fill="#b45309"/>
-                    <path d="M50 93 Q 45 108, 53 124" stroke="rgba(255,228,230,0.45)" stroke-width="1.5" fill="none"/>
-                    <defs>
-                        <radialGradient id="hGrad3" cx="35%" cy="30%" r="70%">
-                            <stop offset="0%" stop-color="#fef3c7"/>
+                        <radialGradient id="lanternGrad1" cx="50%" cy="60%" r="65%">
+                            <stop offset="0%" stop-color="#fef9c3"/>
                             <stop offset="55%" stop-color="#f59e0b"/>
-                            <stop offset="100%" stop-color="#92400e"/>
+                            <stop offset="100%" stop-color="#b45309"/>
                         </radialGradient>
                     </defs>
                 </svg>
             </div>
 
-            <!-- Heart Balloon 4 (Right Bottom) -->
-            <div onclick="popHeartBalloon(this, event, 3, '#c084fc')" class="heart-balloon animate-float-slow right-[8%] bottom-[18%] sm:right-[15%] sm:bottom-[20%]" title="Tap for a secret compliment!">
-                <svg class="w-14 h-20 sm:w-20 sm:h-28 drop-shadow-[0_0_20px_rgba(192,132,252,0.5)]" viewBox="0 0 100 130" fill="none">
-                    <path d="M50 88 C50 88 12 62 12 34 C12 18 25 8 38 8 C46 8 50 14 50 18 C50 14 54 8 62 8 C75 8 88 18 88 34 C88 62 50 88 50 88 Z" fill="url(#hGrad4)"/>
-                    <ellipse cx="32" cy="26" rx="6" ry="10" transform="rotate(-25 32 26)" fill="white" fill-opacity="0.4"/>
-                    <polygon points="46,87 54,87 56,93 44,93" fill="#7e22ce"/>
-                    <path d="M50 93 Q 55 108, 47 124" stroke="rgba(255,228,230,0.45)" stroke-width="1.5" fill="none"/>
+            <!-- Glowing Star 2 (Right Top - Soft Lavender Star) -->
+            <div onclick="popSkyLantern(this, event, 1, '#c4b5fd')" class="sky-lantern animate-float-medium right-[6%] top-[15%] sm:right-[12%] sm:top-[18%]" title="Tap for a little note!">
+                <svg class="w-16 h-24 sm:w-22 sm:h-28 drop-shadow-[0_0_24px_rgba(196,181,253,0.55)]" viewBox="0 0 100 120" fill="none">
+                    <path d="M50 10 L61 38 L91 41 L68 60 L75 90 L50 74 L25 90 L32 60 L9 41 L39 38 Z" fill="url(#starGrad2)" stroke="#ede9fe" stroke-width="1.5"/>
+                    <circle cx="50" cy="52" r="10" fill="#ffffff" opacity="0.5"/>
+                    <path d="M50 90 Q 54 104, 48 116" stroke="rgba(221,214,254,0.45)" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
                     <defs>
-                        <radialGradient id="hGrad4" cx="35%" cy="30%" r="70%">
-                            <stop offset="0%" stop-color="#f3e8ff"/>
-                            <stop offset="55%" stop-color="#c084fc"/>
-                            <stop offset="100%" stop-color="#581c87"/>
+                        <radialGradient id="starGrad2" cx="45%" cy="40%" r="65%">
+                            <stop offset="0%" stop-color="#f5f3ff"/>
+                            <stop offset="55%" stop-color="#a78bfa"/>
+                            <stop offset="100%" stop-color="#5b21b6"/>
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Glowing Star 3 (Left Bottom - Starlight Gold 4-Point Star) -->
+            <div onclick="popSkyLantern(this, event, 2, '#fde68a')" class="sky-lantern animate-float-fast left-[9%] bottom-[15%] sm:left-[15%] sm:bottom-[18%]" title="Tap for a little note!">
+                <svg class="w-14 h-20 sm:w-20 sm:h-26 drop-shadow-[0_0_22px_rgba(253,230,138,0.55)]" viewBox="0 0 100 120" fill="none">
+                    <path d="M50 8 C55 36 64 45 92 50 C64 55 55 64 50 92 C45 64 36 55 8 50 C36 45 45 36 50 8 Z" fill="url(#starGrad3)"/>
+                    <circle cx="50" cy="50" r="8" fill="#ffffff" opacity="0.8"/>
+                    <defs>
+                        <radialGradient id="starGrad3" cx="50%" cy="50%" r="55%">
+                            <stop offset="0%" stop-color="#ffffff"/>
+                            <stop offset="50%" stop-color="#fde68a"/>
+                            <stop offset="100%" stop-color="#d97706"/>
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Sky Lantern 4 (Right Bottom - Sunset Peach Lantern) -->
+            <div onclick="popSkyLantern(this, event, 3, '#fdba74')" class="sky-lantern animate-float-slow right-[8%] bottom-[17%] sm:right-[14%] sm:bottom-[20%]" title="Tap for a little note!">
+                <svg class="w-14 h-22 sm:w-20 sm:h-28 drop-shadow-[0_0_22px_rgba(253,186,116,0.5)]" viewBox="0 0 100 130" fill="none">
+                    <path d="M28 30 C28 16 72 16 72 30 L64 82 C64 90 36 90 36 82 Z" fill="url(#lanternGrad4)"/>
+                    <circle cx="50" cy="62" r="12" fill="#fffbeb" opacity="0.75"/>
+                    <path d="M38 22 L41 84 M62 22 L59 84" stroke="rgba(124,45,18,0.3)" stroke-width="1.5"/>
+                    <ellipse cx="50" cy="84" rx="14" ry="3.5" fill="#9a3412"/>
+                    <path d="M50 88 Q 54 104, 48 118" stroke="#fed7aa" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+                    <defs>
+                        <radialGradient id="lanternGrad4" cx="50%" cy="60%" r="65%">
+                            <stop offset="0%" stop-color="#ffedd5"/>
+                            <stop offset="55%" stop-color="#fb923c"/>
+                            <stop offset="100%" stop-color="#9a3412"/>
                         </radialGradient>
                     </defs>
                 </svg>
@@ -347,53 +353,53 @@
         <!-- Hero Content Centerpiece -->
         <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
             
-            <!-- Top Romantic Pill Tag -->
-            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill text-amber-200 text-xs sm:text-sm font-medium mb-7 border border-rose-300/30 shadow-inner">
-                <i data-lucide="sparkles" class="w-4 h-4 text-rose-300"></i>
-                <span id="hero-badge-display" class="tracking-wider uppercase text-xs font-semibold">To Someone Truly Special</span>
-                <span class="px-2.5 py-0.5 text-xs font-bold bg-gradient-to-r from-rose-400 to-amber-300 text-slate-950 rounded-full" id="hero-tag-pill">MY FAVORITE PERSON</span>
+            <!-- Top Subtle Pill Tag -->
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill text-amber-200 text-xs sm:text-sm font-medium mb-7 border border-amber-300/25 shadow-inner">
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+                <span id="hero-badge-display" class="tracking-wider uppercase text-xs font-semibold">A Little Birthday Surprise</span>
+                <span class="px-2.5 py-0.5 text-xs font-bold bg-gradient-to-r from-amber-300 to-violet-300 text-slate-950 rounded-full" id="hero-tag-pill">ONE OF A KIND</span>
             </div>
 
-            <!-- Main Animated Romantic Greeting Heading -->
+            <!-- Main Animated Greeting Heading -->
             <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] mb-6">
                 Happy Birthday,<br/>
-                <span id="crush-name-display" class="text-gradient-romantic italic font-normal drop-shadow-[0_5px_30px_rgba(251,113,133,0.4)]">Sophia</span>
+                <span id="crush-name-display" class="text-gradient-starlight italic font-normal drop-shadow-[0_5px_30px_rgba(251,191,36,0.3)]">Sona</span>
             </h1>
 
             <!-- Hero Subtitle -->
-            <p id="hero-subtitle-display" class="text-base sm:text-xl md:text-2xl text-rose-100/85 max-w-2xl font-light leading-relaxed mb-10 px-2">
-                Somehow the world got a whole lot brighter the day you were born. Here’s a little corner of the internet made just to celebrate you today.
+            <p id="hero-subtitle-display" class="text-base sm:text-xl md:text-2xl text-slate-200/85 max-w-2xl font-light leading-relaxed mb-10 px-2">
+                To someone who makes ordinary days feel a little brighter. Here’s a small corner of the internet made just to celebrate you today.
             </p>
 
             <!-- Hero Action Buttons -->
             <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-5">
-                <button onclick="startRomanticExperience()" class="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 text-white font-semibold text-base sm:text-lg shadow-[0_0_35px_rgba(244,63,94,0.5)] hover:shadow-[0_0_50px_rgba(251,113,133,0.75)] hover:scale-105 active:scale-95 transition-all duration-300">
-                    <i data-lucide="heart" class="w-5 h-5 fill-white group-hover:scale-110 transition-transform"></i>
-                    <span id="hero-party-btn-text">Play Your Song & Send Hearts</span>
+                <button onclick="startCelebrationExperience()" class="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-violet-300 text-slate-950 font-semibold text-base sm:text-lg shadow-[0_0_35px_rgba(251,191,36,0.35)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] hover:scale-105 active:scale-95 transition-all duration-300">
+                    <i data-lucide="music" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
+                    <span id="hero-party-btn-text">Play Birthday Melody & Sparkles</span>
                 </button>
 
-                <a href="#cake-section" class="inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl glass-card hover:bg-rose-500/15 text-rose-50 font-medium text-base sm:text-lg transition-all hover:scale-105 active:scale-95">
+                <a href="#cake-section" class="inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-medium text-base sm:text-lg transition-all hover:scale-105 active:scale-95">
                     <span>Make a Birthday Wish</span>
                     <i data-lucide="flame" class="w-5 h-5 text-amber-300"></i>
                 </a>
             </div>
 
             <!-- Interactive Hint -->
-            <p class="mt-9 text-xs text-rose-200/60 flex items-center gap-1.5">
-                <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-rose-400"></i>
-                <span>Psst: Tap any floating heart balloon for a little compliment!</span>
+            <p class="mt-9 text-xs text-slate-300/60 flex items-center gap-1.5">
+                <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-amber-300"></i>
+                <span>Psst: Tap any floating lantern or star around you!</span>
             </p>
         </div>
 
         <!-- Scroll Down Indicator -->
-        <a href="#cake-section" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-rose-200/60 hover:text-white transition-colors flex flex-col items-center gap-1 text-xs">
+        <a href="#cake-section" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-400 hover:text-white transition-colors flex flex-col items-center gap-1 text-xs">
             <span>Scroll Down</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce text-rose-400"></i>
+            <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce text-amber-300"></i>
         </a>
     </section>
 
     <!-- ========================================== -->
-    <!-- 2. INTERACTIVE ROMANTIC BIRTHDAY CAKE      -->
+    <!-- 2. INTERACTIVE MIDNIGHT & GOLD CAKE        -->
     <!-- ========================================== -->
     <section id="cake-section" class="py-20 sm:py-28 px-4 relative">
         <div class="max-w-4xl mx-auto">
@@ -401,74 +407,80 @@
             <!-- Section Header -->
             <div class="text-center mb-10">
                 <span class="text-xs font-semibold uppercase tracking-widest text-amber-300 bg-amber-400/10 border border-amber-300/25 px-3.5 py-1.5 rounded-full">Make A Wish ✨</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-3">A Cake For Someone Sweet</h2>
-                <p id="cake-instruction-text" class="text-rose-100/75 text-sm sm:text-base max-w-lg mx-auto">
-                    Close your eyes, make a wish, and tap the flames—or click <span class="text-amber-200 font-medium">"Use Mic to Blow"</span> and blow gently to unlock your secret birthday wish!
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-3">Time for Birthday Candles</h2>
+                <p id="cake-instruction-text" class="text-slate-300/80 text-sm sm:text-base max-w-lg mx-auto">
+                    Make a wish and tap the flames—or click <span class="text-amber-200 font-medium">"Use Mic to Blow"</span> and blow gently to see what's waiting!
                 </p>
             </div>
 
             <!-- Cake Glass Stage -->
             <div class="glass-card rounded-3xl p-6 sm:p-12 flex flex-col items-center relative overflow-hidden">
                 
-                <!-- Ambient Warm Rose-Gold Glow (Dims when candles are blown out) -->
-                <div id="cake-ambient-glow" class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-rose-500/20 blur-3xl absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none transition-opacity duration-1000"></div>
+                <!-- Ambient Warm Gold-Indigo Glow (Dims when candles are blown out) -->
+                <div id="cake-ambient-glow" class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-amber-400/15 blur-3xl absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none transition-opacity duration-1000"></div>
 
                 <!-- Candle Counter Pill -->
-                <div class="relative z-10 mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 border border-rose-300/20 text-xs sm:text-sm text-amber-200">
+                <div class="relative z-10 mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950/60 border border-amber-300/20 text-xs sm:text-sm text-amber-200">
                     <i data-lucide="flame" class="w-4 h-4 text-amber-400"></i>
                     <span id="candles-status-label">5 of 5 Candles Glowing</span>
                 </div>
 
-                <!-- Interactive SVG Romantic Strawberry & Rose-Gold Cake -->
+                <!-- Interactive SVG Midnight-Vanilla & Gold-Drip Cake -->
                 <div class="relative z-10 w-full max-w-md flex justify-center my-2 select-none">
                     <svg viewBox="0 0 400 330" class="w-full h-auto max-h-[350px] overflow-visible">
                         <defs>
-                            <!-- Romantic Cake Gradients -->
+                            <!-- Midnight & Vanilla-Gold Cake Gradients -->
                             <linearGradient id="spongeTop" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#fda4af"/>
-                                <stop offset="50%" stop-color="#fb7185"/>
-                                <stop offset="100%" stop-color="#e11d48"/>
+                                <stop offset="0%" stop-color="#312e81"/>
+                                <stop offset="50%" stop-color="#4338ca"/>
+                                <stop offset="100%" stop-color="#1e1b4b"/>
                             </linearGradient>
                             <linearGradient id="spongeBottom" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#f43f5e"/>
-                                <stop offset="50%" stop-color="#fb7185"/>
-                                <stop offset="100%" stop-color="#be123c"/>
+                                <stop offset="0%" stop-color="#1e1b4b"/>
+                                <stop offset="50%" stop-color="#312e81"/>
+                                <stop offset="100%" stop-color="#0f172a"/>
                             </linearGradient>
                             <linearGradient id="icingGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stop-color="#fffdf9"/>
-                                <stop offset="100%" stop-color="#ffe4e6"/>
+                                <stop offset="0%" stop-color="#fffbeb"/>
+                                <stop offset="55%" stop-color="#fde68a"/>
+                                <stop offset="100%" stop-color="#f59e0b"/>
                             </linearGradient>
                             <linearGradient id="goldPlateGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#d97706"/>
-                                <stop offset="50%" stop-color="#fef08a"/>
-                                <stop offset="100%" stop-color="#b45309"/>
+                                <stop offset="0%" stop-color="#94a3b8"/>
+                                <stop offset="50%" stop-color="#f8fafc"/>
+                                <stop offset="100%" stop-color="#64748b"/>
                             </linearGradient>
                             <radialGradient id="flameGrad" cx="50%" cy="70%" r="60%">
                                 <stop offset="0%" stop-color="#ffffff"/>
                                 <stop offset="35%" stop-color="#fef08a"/>
-                                <stop offset="70%" stop-color="#fb7185"/>
-                                <stop offset="100%" stop-color="#e11d48" stop-opacity="0"/>
+                                <stop offset="70%" stop-color="#f59e0b"/>
+                                <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
                             </radialGradient>
                         </defs>
 
-                        <!--Glowing Heart Topper Behind Candles -->
-                        <g class="opacity-90">
-                            <line x1="200" y1="45" x2="200" y2="122" stroke="#fde68a" stroke-width="2.5"/>
-                            <path d="M200 48 C200 48 176 32 176 18 C176 9 184 4 191 4 C196 4 200 8 200 11 C200 8 204 4 209 4 C216 4 224 9 224 18 C224 32 200 48 200 48 Z" fill="url(#spongeTop)" stroke="#fde68a" stroke-width="2" filter="drop-shadow(0 0 12px rgba(251,113,133,0.7))"/>
+                        <!-- Glowing Crescent Moon & Star Topper Behind Candles -->
+                        <g class="opacity-95">
+                            <line x1="200" y1="42" x2="200" y2="122" stroke="#fde68a" stroke-width="2"/>
+                            <!-- Crescent Moon -->
+                            <path d="M206 10 C190 12 182 28 190 41 C197 52 213 54 222 45 C210 47 200 39 200 27 C200 18 203 13 206 10 Z" fill="#fde68a" filter="drop-shadow(0 0 12px rgba(251,191,36,0.75))"/>
+                            <!-- Little Accompanying Star -->
+                            <path d="M218 16 L220 21 L225 23 L220 25 L218 30 L216 25 L211 23 L216 21 Z" fill="#c4b5fd"/>
                         </g>
 
-                        <!-- Cake Stand / Champagne Gold Plate -->
-                        <ellipse cx="200" cy="305" rx="160" ry="15" fill="rgba(0,0,0,0.5)"/>
+                        <!-- Cake Stand / Silver-Gold Plate -->
+                        <ellipse cx="200" cy="305" rx="160" ry="15" fill="rgba(0,0,0,0.55)"/>
                         <path d="M55 292 L345 292 C355 292 355 304 345 304 L55 304 C45 304 45 292 55 292 Z" fill="url(#goldPlateGrad)"/>
 
-                        <!-- Bottom Tier Layer -->
-                        <rect x="75" y="205" width="250" height="87" rx="14" fill="url(#spongeBottom)"/>
-                        <!-- Bottom Tier Mini Hearts -->
-                        <path d="M115 258 C115 258 107 252 107 247 C107 244 110 242 112 242 C114 242 115 244 115 245 C115 244 116 242 118 242 C120 242 123 244 123 247 C123 252 115 258 115 258 Z" fill="#fde68a" opacity="0.85"/>
-                        <path d="M200 262 C200 262 192 256 192 251 C192 248 195 246 197 246 C199 246 200 248 200 249 C200 248 201 246 203 246 C205 246 208 248 208 251 C208 256 200 262 200 262 Z" fill="#fde68a" opacity="0.85"/>
-                        <path d="M285 258 C285 258 277 252 277 247 C277 244 280 242 282 242 C284 242 285 244 285 245 C285 244 286 242 288 242 C290 242 293 244 293 247 C293 252 285 258 285 258 Z" fill="#fde68a" opacity="0.85"/>
+                        <!-- Bottom Tier Layer (Midnight Indigo Velvet) -->
+                        <rect x="75" y="205" width="250" height="87" rx="14" fill="url(#spongeBottom)" stroke="rgba(253,230,138,0.2)" stroke-width="1"/>
+                        <!-- Bottom Tier Starlight Accents -->
+                        <circle cx="115" cy="255" r="2.5" fill="#fde68a" opacity="0.85"/>
+                        <path d="M200 245 L202 251 L208 253 L202 255 L200 261 L198 255 L192 253 L198 251 Z" fill="#fde68a" opacity="0.9"/>
+                        <circle cx="285" cy="255" r="2.5" fill="#fde68a" opacity="0.85"/>
+                        <circle cx="155" cy="268" r="2" fill="#c4b5fd" opacity="0.75"/>
+                        <circle cx="245" cy="268" r="2" fill="#c4b5fd" opacity="0.75"/>
 
-                        <!-- Bottom Tier Dripping Vanilla-Rose Icing -->
+                        <!-- Bottom Tier Dripping Warm Gold & Vanilla Glaze -->
                         <path d="M75 215 
                                  Q75 202 90 202 L310 202 Q325 202 325 215
                                  L325 225
@@ -484,9 +496,9 @@
                                  Q88 212 75 228 Z" fill="url(#icingGrad)"/>
 
                         <!-- Top Tier Layer -->
-                        <rect x="105" y="132" width="190" height="75" rx="12" fill="url(#spongeTop)"/>
+                        <rect x="105" y="132" width="190" height="75" rx="12" fill="url(#spongeTop)" stroke="rgba(253,230,138,0.2)" stroke-width="1"/>
 
-                        <!-- Top Tier Dripping Icing -->
+                        <!-- Top Tier Dripping Glaze -->
                         <path d="M105 142
                                  Q105 130 120 130 L280 130 Q295 130 295 142
                                  L295 152
@@ -499,19 +511,19 @@
                                  Q132 172 120 150
                                  Q112 142 105 154 Z" fill="url(#icingGrad)"/>
 
-                        <!-- Pearl & Rose Gold Sprinkles on Top -->
-                        <circle cx="140" cy="137" r="3" fill="#fb7185"/>
-                        <circle cx="178" cy="140" r="3" fill="#fbbf24"/>
-                        <circle cx="222" cy="136" r="3" fill="#fb7185"/>
-                        <circle cx="260" cy="139" r="3" fill="#fbbf24"/>
+                        <!-- Lavender & Gold Sprinkles on Top -->
+                        <circle cx="140" cy="137" r="3" fill="#a78bfa"/>
+                        <circle cx="178" cy="140" r="3" fill="#f59e0b"/>
+                        <circle cx="222" cy="136" r="3" fill="#a78bfa"/>
+                        <circle cx="260" cy="139" r="3" fill="#f59e0b"/>
 
                         <!-- ================= 5 INTERACTIVE CANDLES ================= -->
                         <!-- Candle 1 -->
                         <g class="cursor-pointer" onclick="extinguishCandle(0)">
-                            <rect x="128" y="82" width="12" height="50" rx="4" fill="#fff1f2"/>
-                            <path d="M128 94 L140 102 M128 110 L140 118" stroke="#fb7185" stroke-width="3"/>
+                            <rect x="128" y="82" width="12" height="50" rx="4" fill="#f8fafc"/>
+                            <path d="M128 94 L140 102 M128 110 L140 118" stroke="#f59e0b" stroke-width="3"/>
                             <line x1="134" y1="76" x2="134" y2="82" stroke="#475569" stroke-width="2"/>
-                            <circle id="smoke-0" cx="134" cy="68" r="6" fill="#fda4af" class="smoke-puff"/>
+                            <circle id="smoke-0" cx="134" cy="68" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-0" class="flame-wrapper">
                                 <g class="candle-flame">
                                     <ellipse cx="134" cy="62" rx="10" ry="18" fill="url(#flameGrad)"/>
@@ -524,10 +536,10 @@
 
                         <!-- Candle 2 -->
                         <g class="cursor-pointer" onclick="extinguishCandle(1)">
-                            <rect x="161" y="78" width="12" height="54" rx="4" fill="#fff1f2"/>
-                            <path d="M161 90 L173 98 M161 106 L173 114" stroke="#f472b6" stroke-width="3"/>
+                            <rect x="161" y="78" width="12" height="54" rx="4" fill="#f8fafc"/>
+                            <path d="M161 90 L173 98 M161 106 L173 114" stroke="#a78bfa" stroke-width="3"/>
                             <line x1="167" y1="72" x2="167" y2="78" stroke="#475569" stroke-width="2"/>
-                            <circle id="smoke-1" cx="167" cy="64" r="6" fill="#fda4af" class="smoke-puff"/>
+                            <circle id="smoke-1" cx="167" cy="64" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-1" class="flame-wrapper">
                                 <g class="candle-flame" style="animation-delay: 0.25s">
                                     <ellipse cx="167" cy="58" rx="10" ry="18" fill="url(#flameGrad)"/>
@@ -540,10 +552,10 @@
 
                         <!-- Candle 3 (Center) -->
                         <g class="cursor-pointer" onclick="extinguishCandle(2)">
-                            <rect x="194" y="74" width="12" height="58" rx="4" fill="#fff1f2"/>
+                            <rect x="194" y="74" width="12" height="58" rx="4" fill="#f8fafc"/>
                             <path d="M194 86 L206 94 M194 102 L206 110 M194 118 L206 126" stroke="#fbbf24" stroke-width="3"/>
                             <line x1="200" y1="68" x2="200" y2="74" stroke="#475569" stroke-width="2"/>
-                            <circle id="smoke-2" cx="200" cy="60" r="6" fill="#fda4af" class="smoke-puff"/>
+                            <circle id="smoke-2" cx="200" cy="60" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-2" class="flame-wrapper">
                                 <g class="candle-flame" style="animation-delay: 0.5s">
                                     <ellipse cx="200" cy="54" rx="11" ry="19" fill="url(#flameGrad)"/>
@@ -556,10 +568,10 @@
 
                         <!-- Candle 4 -->
                         <g class="cursor-pointer" onclick="extinguishCandle(3)">
-                            <rect x="227" y="78" width="12" height="54" rx="4" fill="#fff1f2"/>
-                            <path d="M227 90 L239 98 M227 106 L239 114" stroke="#f472b6" stroke-width="3"/>
+                            <rect x="227" y="78" width="12" height="54" rx="4" fill="#f8fafc"/>
+                            <path d="M227 90 L239 98 M227 106 L239 114" stroke="#a78bfa" stroke-width="3"/>
                             <line x1="233" y1="72" x2="233" y2="78" stroke="#475569" stroke-width="2"/>
-                            <circle id="smoke-3" cx="233" cy="64" r="6" fill="#fda4af" class="smoke-puff"/>
+                            <circle id="smoke-3" cx="233" cy="64" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-3" class="flame-wrapper">
                                 <g class="candle-flame" style="animation-delay: 0.15s">
                                     <ellipse cx="233" cy="58" rx="10" ry="18" fill="url(#flameGrad)"/>
@@ -572,10 +584,10 @@
 
                         <!-- Candle 5 -->
                         <g class="cursor-pointer" onclick="extinguishCandle(4)">
-                            <rect x="260" y="82" width="12" height="50" rx="4" fill="#fff1f2"/>
-                            <path d="M260 94 L272 102 M260 110 L272 118" stroke="#fb7185" stroke-width="3"/>
+                            <rect x="260" y="82" width="12" height="50" rx="4" fill="#f8fafc"/>
+                            <path d="M260 94 L272 102 M260 110 L272 118" stroke="#f59e0b" stroke-width="3"/>
                             <line x1="266" y1="76" x2="266" y2="82" stroke="#475569" stroke-width="2"/>
-                            <circle id="smoke-4" cx="266" cy="68" r="6" fill="#fda4af" class="smoke-puff"/>
+                            <circle id="smoke-4" cx="266" cy="68" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-4" class="flame-wrapper">
                                 <g class="candle-flame" style="animation-delay: 0.4s">
                                     <ellipse cx="266" cy="62" rx="10" ry="18" fill="url(#flameGrad)"/>
@@ -590,33 +602,33 @@
 
                 <!-- Interactive Cake Buttons -->
                 <div class="relative z-10 flex flex-wrap justify-center items-center gap-3.5 mt-4">
-                    <button id="blow-candles-btn" onclick="blowOutAllCandles()" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-rose-400 via-pink-500 to-amber-300 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-rose-500/25 transition-all hover:scale-105 active:scale-95">
+                    <button id="blow-candles-btn" onclick="blowOutAllCandles()" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-300 via-amber-400 to-violet-300 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-amber-500/20 transition-all hover:scale-105 active:scale-95">
                         <i data-lucide="wind" class="w-5 h-5"></i>
                         <span>Blow Out Candles</span>
                     </button>
 
-                    <button id="mic-blow-btn" onclick="toggleMicBlowDetection()" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl glass-pill hover:bg-rose-500/20 text-rose-50 font-medium text-sm sm:text-base transition-all active:scale-95">
-                        <i data-lucide="mic" class="w-4 h-4 text-rose-300"></i>
+                    <button id="mic-blow-btn" onclick="toggleMicBlowDetection()" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl glass-pill hover:bg-white/10 text-slate-100 font-medium text-sm sm:text-base transition-all active:scale-95">
+                        <i data-lucide="mic" class="w-4 h-4 text-amber-300"></i>
                         <span id="mic-btn-label">Use Mic to Blow</span>
                     </button>
 
-                    <button id="relight-candles-btn" onclick="relightAllCandles()" class="hidden inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl glass-pill hover:bg-rose-500/20 text-amber-200 font-medium text-sm sm:text-base transition-all active:scale-95">
+                    <button id="relight-candles-btn" onclick="relightAllCandles()" class="hidden inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl glass-pill hover:bg-white/10 text-amber-200 font-medium text-sm sm:text-base transition-all active:scale-95">
                         <i data-lucide="flame" class="w-4 h-4"></i>
                         <span>Relight Candles</span>
                     </button>
                 </div>
 
-                <!-- Hidden Sweet & Flirty Birthday Wish Reveal Banner -->
-                <div id="special-wish-reveal" class="hidden w-full max-w-2xl mt-8 pt-8 border-t border-rose-300/20 text-center transition-all duration-700">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-500/20 border border-rose-400/30 text-rose-200 text-xs font-semibold mb-3">
-                        <i data-lucide="heart" class="w-3.5 h-3.5 fill-rose-400 text-rose-400"></i>
-                        <span>SECRET WISH UNLOCKED</span>
+                <!-- Hidden Subtle & Hopeful Birthday Wish Reveal Banner -->
+                <div id="special-wish-reveal" class="hidden w-full max-w-2xl mt-8 pt-8 border-t border-amber-300/20 text-center transition-all duration-700">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/15 border border-amber-300/30 text-amber-200 text-xs font-semibold mb-3">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i>
+                        <span>BIRTHDAY WISH UNLOCKED</span>
                     </div>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-rose-300 to-pink-200 mb-3">
-                        I Hope All Your Wishes Come True...
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-violet-200 to-amber-100 mb-3">
+                        Here's To Your Next Chapter...
                     </h3>
-                    <p id="hidden-wish-display" class="text-rose-100/90 text-base sm:text-lg leading-relaxed italic font-editorial text-xl px-4">
-                        "May this year bring you endless reasons to smile, all the magic you deserve, and maybe—if I'm lucky—a lot more time spent with me."
+                    <p id="hidden-wish-display" class="text-slate-200/90 text-base sm:text-lg leading-relaxed italic font-editorial text-xl px-4">
+                        "May all your secret wishes come true this year... (and maybe one of mine too ✨)."
                     </p>
                 </div>
 
@@ -625,91 +637,91 @@
     </section>
 
     <!-- ========================================== -->
-    <!-- 3. "LITTLE THINGS I ADORE ABOUT YOU" CARDS -->
+    <!-- 3. "WHY YOU'RE ONE OF A KIND" CARDS        -->
     <!-- ========================================== -->
-    <section id="adore-section" class="py-20 sm:py-24 px-4 relative">
+    <section id="kind-section" class="py-20 sm:py-24 px-4 relative">
         <div class="max-w-5xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-12">
-                <span class="text-xs font-semibold uppercase tracking-widest text-rose-300 bg-rose-500/15 border border-rose-400/25 px-3.5 py-1.5 rounded-full">Reasons You're Unforgettable</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-3">Little Things I Adore About You</h2>
-                <p class="text-rose-100/70 text-sm sm:text-base max-w-lg mx-auto">
-                    Tap any card below to reveal a little confession.
+                <span class="text-xs font-semibold uppercase tracking-widest text-violet-300 bg-violet-500/15 border border-violet-400/25 px-3.5 py-1.5 rounded-full">Small Appreciation</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-3">Why You're One of a Kind</h2>
+                <p class="text-slate-300/75 text-sm sm:text-base max-w-lg mx-auto">
+                    Just a few things that make you stand out without even trying.
                 </p>
             </div>
 
             <!-- 3 Interactive Glow Cards Grid -->
-            <div id="adore-cards-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div id="kind-cards-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Populated dynamically from CRUSH_BIRTHDAY_CONFIG -->
             </div>
         </div>
     </section>
 
     <!-- ========================================== -->
-    <!-- 4. 3D FLIP SECRET LOVE / CRUSH LETTER CARD -->
+    <!-- 4. 3D FLIP NOTE CARD ("A LITTLE NOTE")     -->
     <!-- ========================================== -->
     <section id="message-section" class="py-20 sm:py-28 px-4 relative">
         <div class="max-w-2xl mx-auto">
             
             <!-- Section Header -->
             <div class="text-center mb-10">
-                <span class="text-xs font-semibold uppercase tracking-widest text-amber-200 bg-amber-400/10 border border-amber-300/25 px-3.5 py-1.5 rounded-full">For Your Eyes Only 💌</span>
-                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-2">A Secret Birthday Note</h2>
-                <p class="text-rose-100/75 text-sm sm:text-base">Tap the wax-sealed envelope below to open your letter.</p>
+                <span class="text-xs font-semibold uppercase tracking-widest text-amber-200 bg-amber-400/10 border border-amber-300/25 px-3.5 py-1.5 rounded-full">Before You Go ✨</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-2">A Little Note For You</h2>
+                <p class="text-slate-300/75 text-sm sm:text-base">Tap the star-sealed card below to flip it open.</p>
             </div>
 
             <!-- 3D Flip Card Container -->
             <div class="perspective-container cursor-pointer" onclick="toggleSecretLetterFlip()">
                 <div id="greeting-flip-card" class="flip-card-inner">
                     
-                    <!-- FRONT OF CARD (Romantic Wax-Sealed Envelope) -->
-                    <div class="flip-card-front glass-card p-8 sm:p-12 flex flex-col justify-between items-center text-center border-2 border-rose-400/30 bg-gradient-to-br from-rose-950/85 via-[#1a0717]/95 to-pink-950/85">
-                        <div class="w-full flex justify-between items-center text-xs text-rose-200/70 uppercase tracking-widest">
-                            <span>Midnight Special Delivery</span>
-                            <span>Sealed With ♥</span>
+                    <!-- FRONT OF CARD (Starlit Wax-Sealed Envelope) -->
+                    <div class="flip-card-front glass-card p-8 sm:p-12 flex flex-col justify-between items-center text-center border-2 border-amber-300/25 bg-gradient-to-br from-slate-900/90 via-[#0e1124]/95 to-indigo-950/85">
+                        <div class="w-full flex justify-between items-center text-xs text-slate-300/70 uppercase tracking-widest">
+                            <span>Starlight Post</span>
+                            <span>Special Delivery ✦</span>
                         </div>
 
-                        <!-- Glowing Wax Heart Seal Centerpiece -->
+                        <!-- Glowing Star Wax Seal Centerpiece -->
                         <div class="my-auto flex flex-col items-center">
-                            <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-rose-600 via-pink-500 to-amber-300 p-0.5 shadow-[0_0_45px_rgba(244,63,94,0.65)] animate-pulse-glow mb-6 flex items-center justify-center">
-                                <div class="w-full h-full rounded-full bg-rose-950/60 backdrop-blur-sm flex items-center justify-center border border-amber-200/40">
-                                    <i data-lucide="heart" class="w-10 h-10 text-rose-200 fill-rose-400"></i>
+                            <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-amber-500 via-amber-300 to-violet-400 p-0.5 shadow-[0_0_45px_rgba(251,191,36,0.45)] animate-pulse-glow mb-6 flex items-center justify-center">
+                                <div class="w-full h-full rounded-full bg-slate-950/75 backdrop-blur-sm flex items-center justify-center border border-amber-200/40">
+                                    <i data-lucide="sparkles" class="w-10 h-10 text-amber-200"></i>
                                 </div>
                             </div>
-                            <p class="text-xs uppercase tracking-widest text-amber-200 font-semibold mb-1">To The Birthday Star</p>
-                            <h3 class="font-handwriting text-4xl sm:text-5xl text-white font-bold" id="envelope-recipient-name">For Sophia</h3>
+                            <p class="text-xs uppercase tracking-widest text-amber-200 font-semibold mb-1">Birthday Note</p>
+                            <h3 class="font-handwriting text-4xl sm:text-5xl text-white font-bold" id="envelope-recipient-name">For Sona</h3>
                         </div>
 
-                        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-rose-500/20 border border-rose-300/30 hover:bg-rose-500/30 text-rose-100 text-sm font-medium transition">
-                            <i data-lucide="sparkles" class="w-4 h-4 text-amber-200"></i>
-                            <span>Tap to Open Your Secret Note 💌</span>
+                        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-400/15 border border-amber-300/30 hover:bg-amber-400/25 text-amber-100 text-sm font-medium transition">
+                            <i data-lucide="mail-open" class="w-4 h-4 text-amber-300"></i>
+                            <span>Tap to Open Your Note ✨</span>
                         </div>
                     </div>
 
-                    <!-- BACK OF CARD (Opened Romantic Letter Inside) -->
-                    <div class="flip-card-back glass-card p-7 sm:p-11 flex flex-col justify-between border-2 border-amber-300/35 bg-gradient-to-br from-[#1b0816]/95 via-rose-950/90 to-[#140510]/95 overflow-y-auto">
+                    <!-- BACK OF CARD (Opened Note Inside) -->
+                    <div class="flip-card-back glass-card p-7 sm:p-11 flex flex-col justify-between border-2 border-amber-300/35 bg-gradient-to-br from-[#0e1226]/95 via-slate-900/95 to-indigo-950/95 overflow-y-auto">
                         <div>
-                            <div class="flex justify-between items-start border-b border-rose-300/15 pb-4 mb-5">
+                            <div class="flex justify-between items-start border-b border-amber-300/15 pb-4 mb-5">
                                 <div>
-                                    <span class="text-xs uppercase tracking-widest text-rose-300 font-semibold block">A Little Confession</span>
-                                    <h3 id="card-salutation-display" class="font-handwriting text-3xl sm:text-4xl text-amber-200 mt-1">Dearest Sophia,</h3>
+                                    <span class="text-xs uppercase tracking-widest text-violet-300 font-semibold block">A Birthday Note</span>
+                                    <h3 id="card-salutation-display" class="font-handwriting text-3xl sm:text-4xl text-amber-200 mt-1">Hey Sona,</h3>
                                 </div>
-                                <i data-lucide="heart" class="w-6 h-6 text-rose-400 fill-rose-400 shrink-0"></i>
+                                <i data-lucide="moon-star" class="w-6 h-6 text-amber-300 shrink-0"></i>
                             </div>
 
                             <!-- Main Personal Letter Body -->
-                            <p id="card-message-body" class="text-rose-50/95 text-sm sm:text-base leading-relaxed whitespace-pre-line font-light">
+                            <p id="card-message-body" class="text-slate-100/95 text-sm sm:text-base leading-relaxed whitespace-pre-line font-light">
                                <!-- Populated via Config -->
                             </p>
                         </div>
 
-                        <div class="pt-5 mt-5 border-t border-rose-300/15 flex justify-between items-end">
+                        <div class="pt-5 mt-5 border-t border-amber-300/15 flex justify-between items-end">
                             <div>
-                                <span class="text-xs text-rose-300/70 block">Always cheering for you,</span>
-                                <span id="card-sender-display" class="font-handwriting text-2xl sm:text-3xl text-rose-300 font-bold">Someone Who Adores You</span>
+                                <span class="text-xs text-slate-400 block">Wishing you the best,</span>
+                                <span id="card-sender-display" class="font-handwriting text-2xl sm:text-3xl text-amber-300 font-bold">Someone Glad to Know You</span>
                             </div>
-                            <span class="text-xs text-rose-300/60 flex items-center gap-1">
-                                <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Tap to close
+                            <span class="text-xs text-slate-400 flex items-center gap-1">
+                                <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Tap to flip back
                             </span>
                         </div>
                     </div>
@@ -721,14 +733,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-4 border-t border-rose-300/10 text-center text-xs sm:text-sm text-rose-200/60">
+    <footer class="py-10 px-4 border-t border-slate-800/80 text-center text-xs sm:text-sm text-slate-400">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <p class="flex items-center gap-1.5">
-                <span>Made with</span>
-                <i data-lucide="heart" class="w-4 h-4 text-rose-400 fill-rose-400 animate-pulse"></i>
-                <span>just for <strong id="footer-crush-name" class="text-rose-100">Sophia</strong></span>
+                <span>Crafted under the stars</span>
+                <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+                <span>for <strong id="footer-crush-name" class="text-slate-200">Sona</strong></span>
             </p>
-            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-rose-100 transition flex items-center gap-1">
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-slate-200 transition flex items-center gap-1">
                 <span>Back to top</span>
                 <i data-lucide="arrow-up" class="w-4 h-4"></i>
             </button>
@@ -736,9 +748,9 @@
     </footer>
 
     <!-- Custom Toast Notification -->
-    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-pill bg-[#1a0717]/95 border border-rose-400/40 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-sm text-rose-50">
-        <i data-lucide="heart" class="w-4 h-4 text-rose-400 fill-rose-400"></i>
-        <span id="toast-message">Sent with love!</span>
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-pill bg-slate-950/95 border border-amber-300/35 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-sm text-slate-100">
+        <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
+        <span id="toast-message">Sparkles sent!</span>
     </div>
 
     <!-- ========================================== -->
@@ -747,50 +759,47 @@
     <script id="crush-config-script">
         // =========================================================================
         // EASY-TO-EDIT CONFIGURATION:
-        // Customize your crush's name, compliments, and secret note right here!
+        // Customize her name, your signature, and the messages right here!
         // =========================================================================
         window.CRUSH_BIRTHDAY_CONFIG = {
-            crushName: "Sophia",
-            senderSignature: "Someone Who Adores You ♥",
-            heroBadge: "To Someone Truly Special ✨",
-            heroTagPill: "MY FAVORITE PERSON",
-            heroSubtitle: "Somehow the world got a whole lot brighter the day you were born. Here’s a little corner of the internet made just to celebrate you today.",
+            crushName: "Sona",
+            senderSignature: "Someone Glad to Know You ✨",
+            heroBadge: "A Little Birthday Surprise ✨",
+            heroTagPill: "ONE OF A KIND",
+            heroSubtitle: "To someone who makes ordinary days feel a little brighter. Here’s a small corner of the internet made just to celebrate you today.",
             
-            // Mini compliments that float up when heart balloons are popped:
-            balloonCompliments: [
-                "Your smile is my favorite view ✨",
-                "You make every day brighter 💖",
-                "Effortlessly stunning, inside & out 🌹",
-                "My favorite notification 💌"
+            // Warm, low-key compliments that float up when lanterns/stars are tapped:
+            lanternCompliments: [
+                "Effortlessly cool ✨",
+                "Best vibe to be around 🌙",
+                "Always brightening the room 🌟",
+                "Main character energy ✨"
             ],
 
-            // Secret wish unlocked when all 5 cake candles are blown out:
-            cakeSecretWish: "May this year bring you endless reasons to smile, all the magic you deserve, and maybe—if I'm lucky—a lot more time spent together.",
+            // Subtle, hopeful wish unlocked when all 5 cake candles are blown out:
+            cakeSecretWish: "May all your secret wishes come true this year... (and maybe one of mine too ✨).",
 
-            // "Little Things I Adore About You" interactive cards:
-            adoreCards: [
+            // "Why You're One of a Kind" thoughtful cards:
+            oneOfAKindCards: [
                 {
                     icon: "sparkles",
-                    title: "Your Smile",
-                    preview: "Tap to read why it's unfair...",
-                    note: "It genuinely has this unfair superpower of making my entire day 100x better the second I see it."
+                    title: "Your Energy",
+                    note: "There's something about the way you show up that effortlessly makes every conversation better."
                 },
                 {
-                    icon: "message-circle-heart",
-                    title: "Every Conversation",
-                    preview: "Tap to read about our talks...",
-                    note: "Whether we're talking about something deep or laughing over the most random things, talking to you is always the highlight of my day."
+                    icon: "clock",
+                    title: "The Little Moments",
+                    note: "Whether it's a random laugh or a quick chat, time always seems to pass a little too fast around you."
                 },
                 {
                     icon: "sun",
-                    title: "Your Whole Vibe",
-                    preview: "Tap to read how you feel...",
-                    note: "You have this warm, magnetic energy that makes everyone around you feel special—especially me."
+                    title: "Just Being You",
+                    note: "Genuine, kind, and completely yourself—honestly, it's pretty rare to find someone like you."
                 }
             ],
 
-            // Main 3D Flip Secret Letter Message:
-            secretLetterMessage: "I wanted to do something a little different for your birthday because someone as special as you deserves more than just a regular text.\n\nThank you for being the kind of person who makes ordinary moments feel unforgettable. Every time you laugh or light up talking about the things you love, I find myself admiring you a little bit more.\n\nI hope this year brings you everything your heart wishes for—and I really hope I get to be part of making more memories with you."
+            // Main 3D Flip Note Message:
+            secretLetterMessage: "Happy Birthday! I didn't want today to pass without making something a little special for you.\n\nI really value every moment we get to talk and hang out. You have this effortless way of making things brighter just by being around.\n\nWishing you a year filled with everything that makes you smile—you deserve the absolute best."
         };
     </script>
 
@@ -814,58 +823,58 @@
             initConfettiCanvas();
             lucide.createIcons();
 
-            // Gentle welcome heart & starlight shower after load
+            // Gentle welcome starlight shower after load
             setTimeout(() => {
-                launchConfetti({ particleCount: 45, originY: 0.35 });
+                launchConfetti({ particleCount: 40, originY: 0.35 });
             }, 600);
         });
 
         function renderCrushContent() {
             const cfg = window.CRUSH_BIRTHDAY_CONFIG;
 
-            document.title = `Happy Birthday, ${cfg.crushName}! ✨💖`;
+            document.title = `Happy Birthday, ${cfg.crushName}! ✨`;
             document.getElementById('hero-badge-display').textContent = cfg.heroBadge;
             document.getElementById('hero-tag-pill').textContent = cfg.heroTagPill;
             document.getElementById('crush-name-display').textContent = cfg.crushName;
             document.getElementById('hero-subtitle-display').textContent = cfg.heroSubtitle;
             document.getElementById('hidden-wish-display').textContent = `"${cfg.cakeSecretWish}"`;
             document.getElementById('envelope-recipient-name').textContent = `For ${cfg.crushName}`;
-            document.getElementById('card-salutation-display').textContent = `Dearest ${cfg.crushName},`;
+            document.getElementById('card-salutation-display').textContent = `Hey ${cfg.crushName},`;
             document.getElementById('card-message-body').textContent = cfg.secretLetterMessage;
             document.getElementById('card-sender-display').textContent = cfg.senderSignature;
             document.getElementById('footer-crush-name').textContent = cfg.crushName;
 
-            // Render "Little Things I Adore About You" Cards
-            const grid = document.getElementById('adore-cards-grid');
-            grid.innerHTML = cfg.adoreCards.map((item, idx) => `
-                <div onclick="toggleAdoreCard(${idx})" class="adore-card glass-card rounded-3xl p-7 cursor-pointer flex flex-col justify-between relative overflow-hidden group select-none">
-                    <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-rose-500/10 blur-2xl group-hover:bg-rose-500/25 transition-all"></div>
+            // Render "Why You're One of a Kind" Cards
+            const grid = document.getElementById('kind-cards-grid');
+            grid.innerHTML = cfg.oneOfAKindCards.map((item, idx) => `
+                <div onclick="triggerKindCard(${idx})" class="kind-card glass-card rounded-3xl p-7 cursor-pointer flex flex-col justify-between relative overflow-hidden group select-none">
+                    <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-amber-400/10 blur-2xl group-hover:bg-amber-400/20 transition-all"></div>
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500/25 to-amber-400/20 border border-rose-300/30 flex items-center justify-center mb-5 text-rose-300 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400/20 to-violet-400/20 border border-amber-300/30 flex items-center justify-center mb-5 text-amber-300 group-hover:scale-110 transition-transform">
                             <i data-lucide="${item.icon}" class="w-6 h-6"></i>
                         </div>
-                        <span class="text-[11px] uppercase tracking-widest text-amber-200/80 font-semibold">Reason #0${idx + 1}</span>
+                        <span class="text-[11px] uppercase tracking-widest text-violet-300/80 font-semibold">Note #0${idx + 1}</span>
                         <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">${item.title}</h3>
-                        <p id="adore-note-${idx}" class="text-rose-100/85 text-sm sm:text-base leading-relaxed font-light">
+                        <p class="text-slate-200/85 text-sm sm:text-base leading-relaxed font-light">
                             ${item.note}
                         </p>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-rose-300/10 flex items-center justify-between text-xs text-rose-300">
-                        <span>Tap to send a heart</span>
-                        <i data-lucide="heart" class="w-4 h-4 group-hover:fill-rose-400 transition-all"></i>
+                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-amber-200/80">
+                        <span>Tap for starlight</span>
+                        <i data-lucide="sparkles" class="w-4 h-4 group-hover:rotate-12 transition-all text-amber-300"></i>
                     </div>
                 </div>
             `).join('');
         }
 
-        function toggleAdoreCard(idx) {
-            playRomanticChime(520 + idx * 80);
+        function triggerKindCard(idx) {
+            playStarlightChime(520 + idx * 75);
             launchConfetti({
-                particleCount: 25,
+                particleCount: 24,
                 originX: 0.25 + idx * 0.25,
                 originY: 0.65
             });
-            showToast(`"${window.CRUSH_BIRTHDAY_CONFIG.adoreCards[idx].title}" 💖`);
+            showToast(`"${window.CRUSH_BIRTHDAY_CONFIG.oneOfAKindCards[idx].title}" ✨`);
         }
 
         // ==========================================
@@ -885,7 +894,6 @@
         function playMusicBoxNote(freq, startTime, duration) {
             const ctx = getAudioContext();
 
-            // Dreamy celesta / music-box synthesis with overtone
             const mainOsc = ctx.createOscillator();
             const overtoneOsc = ctx.createOscillator();
             const gain = ctx.createGain();
@@ -897,7 +905,6 @@
             mainOsc.frequency.setValueAtTime(freq, startTime);
             overtoneOsc.frequency.setValueAtTime(freq * 2, startTime);
 
-            // Soft bell-like envelope with long dreamy release
             gain.gain.setValueAtTime(0.001, startTime);
             gain.gain.linearRampToValueAtTime(0.2, startTime + 0.025);
             gain.gain.exponentialRampToValueAtTime(0.0008, startTime + duration * 1.35);
@@ -931,12 +938,10 @@
             isPlayingMusic = true;
             updateMusicButtonUI(true);
 
-            // Gentle Higher Music-Box Octave Frequencies (Hz)
             const N = {
                 G4: 392.00, A4: 440.00, B4: 493.88, C5: 523.25, D5: 587.33, E5: 659.25, F5: 698.46, G5: 783.99
             };
 
-            // Dreamy Music-Box Happy Birthday in C Major / G
             const melody = [
                 [N.G4, 0.75], [N.G4, 0.25], [N.A4, 1.1], [N.G4, 1.1], [N.C5, 1.1], [N.B4, 2.2],
                 [N.G4, 0.75], [N.G4, 0.25], [N.A4, 1.1], [N.G4, 1.1], [N.D5, 1.1], [N.C5, 2.2],
@@ -978,30 +983,29 @@
             const heroBtnText = document.getElementById('hero-party-btn-text');
             if (playing) {
                 label.textContent = "Pause Melody";
-                heroBtnText.textContent = "Playing Your Birthday Song ✨";
+                heroBtnText.textContent = "Playing Birthday Melody ✨";
             } else {
                 label.textContent = "Play Melody";
-                heroBtnText.textContent = "Play Your Song & Send Hearts";
+                heroBtnText.textContent = "Play Birthday Melody & Sparkles";
             }
         }
 
-        function startRomanticExperience() {
-            triggerHeartShower();
+        function startCelebrationExperience() {
+            triggerSparkleShower();
             if (!isPlayingMusic) {
                 playBirthdayMelody();
             }
         }
 
-        // Soft chime sound effect for popping heart balloons & card flips
-        function playRomanticChime(pitch = 520) {
+        function playStarlightChime(pitch = 520) {
             const ctx = getAudioContext();
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
             osc.type = 'sine';
             osc.frequency.setValueAtTime(pitch, ctx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(pitch * 1.4, ctx.currentTime + 0.18);
+            osc.frequency.exponentialRampToValueAtTime(pitch * 1.35, ctx.currentTime + 0.18);
 
-            gain.gain.setValueAtTime(0.18, ctx.currentTime);
+            gain.gain.setValueAtTime(0.16, ctx.currentTime);
             gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.22);
 
             osc.connect(gain);
@@ -1010,14 +1014,13 @@
             osc.stop(ctx.currentTime + 0.24);
         }
 
-        function popHeartBalloon(el, event, complimentIndex, color) {
-            playRomanticChime(540 + complimentIndex * 50);
+        function popSkyLantern(el, event, complimentIndex, color) {
+            playStarlightChime(540 + complimentIndex * 50);
             const rect = el.getBoundingClientRect();
             const centerX = rect.left + rect.width / 2;
             const centerY = rect.top + rect.height / 2;
 
-            // Spawn floating mini-compliment pill at balloon location
-            const compliments = window.CRUSH_BIRTHDAY_CONFIG.balloonCompliments;
+            const compliments = window.CRUSH_BIRTHDAY_CONFIG.lanternCompliments;
             const text = compliments[complimentIndex % compliments.length];
             spawnFloatingCompliment(centerX, centerY, text);
 
@@ -1028,7 +1031,7 @@
                 customColor: color
             });
 
-            el.style.transform = 'scale(1.4)';
+            el.style.transform = 'scale(1.35)';
             el.style.opacity = '0';
             setTimeout(() => {
                 el.style.transform = '';
@@ -1038,15 +1041,15 @@
 
         function spawnFloatingCompliment(x, y, text) {
             const pill = document.createElement('div');
-            pill.className = 'floating-compliment glass-pill px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-rose-100 shadow-xl border border-rose-300/40 whitespace-nowrap';
+            pill.className = 'floating-compliment glass-pill px-4 py-2 rounded-full text-xs sm:text-sm font-medium text-amber-100 shadow-xl border border-amber-300/40 whitespace-nowrap';
             pill.style.left = `${Math.min(Math.max(x, 120), window.innerWidth - 120)}px`;
             pill.style.top = `${y}px`;
-            pill.innerHTML = `✨ ${text}`;
+            pill.innerHTML = `${text}`;
             document.body.appendChild(pill);
 
             setTimeout(() => {
                 pill.remove();
-            }, 2400);
+            }, 2500);
         }
 
         // ==========================================
@@ -1066,7 +1069,7 @@
                 smoke.classList.add('active');
             }
 
-            playRomanticChime(380 + index * 45);
+            playStarlightChime(390 + index * 45);
             updateCandleStatus();
         }
 
@@ -1098,7 +1101,7 @@
             if (remaining > 0) {
                 label.textContent = `${remaining} of 5 Candles Glowing`;
             } else {
-                label.textContent = `Wish Made! ✨💖`;
+                label.textContent = `Wish Made! ✨`;
                 onAllCandlesExtinguished();
             }
         }
@@ -1113,7 +1116,7 @@
             document.getElementById('blow-candles-btn').classList.add('hidden');
             document.getElementById('relight-candles-btn').classList.remove('hidden');
 
-            triggerHeartShower();
+            triggerSparkleShower();
             if (!isPlayingMusic) {
                 playBirthdayMelody();
             }
@@ -1155,7 +1158,7 @@
                 }
                 checkVolume();
             } catch (err) {
-                showToast("Mic access unavailable—tap 'Blow Out Candles' instead! 💖");
+                showToast("Mic access unavailable—tap 'Blow Out Candles' instead! ✨");
             }
         }
 
@@ -1170,13 +1173,13 @@
         }
 
         // ==========================================
-        // 3. SECRET CRUSH LETTER FLIP
+        // 3. 3D NOTE CARD FLIP
         // ==========================================
         function toggleSecretLetterFlip() {
             const card = document.getElementById('greeting-flip-card');
             const isOpening = !card.classList.contains('is-flipped');
             card.classList.toggle('is-flipped');
-            playRomanticChime(isOpening ? 620 : 480);
+            playStarlightChime(isOpening ? 620 : 480);
 
             if (isOpening) {
                 launchConfetti({ particleCount: 35, originX: 0.5, originY: 0.65 });
@@ -1184,7 +1187,7 @@
         }
 
         // ==========================================
-        // 4. ROMANTIC HEART & GOLD SPARKLE CONFETTI ENGINE
+        // 4. STARLIGHT & GOLD SPARKLE CONFETTI ENGINE
         // ==========================================
         let confettiParticles = [];
         let confettiCanvas, confettiCtx;
@@ -1203,42 +1206,48 @@
             confettiCanvas.height = window.innerHeight;
         }
 
-        function drawHeartParticle(ctx, size) {
+        function drawStarSparkleParticle(ctx, size) {
             ctx.beginPath();
-            const topCurveHeight = size * 0.3;
-            ctx.moveTo(0, topCurveHeight);
-            ctx.bezierCurveTo(0, 0, -size / 2, 0, -size / 2, topCurveHeight);
-            ctx.bezierCurveTo(-size / 2, (size + topCurveHeight) / 2, 0, (size + topCurveHeight) / 1.4, 0, size);
-            ctx.bezierCurveTo(0, (size + topCurveHeight) / 1.4, size / 2, (size + topCurveHeight) / 2, size / 2, topCurveHeight);
-            ctx.bezierCurveTo(size / 2, 0, 0, 0, 0, topCurveHeight);
+            const outer = size * 0.7;
+            const inner = size * 0.22;
+            for (let i = 0; i < 4; i++) {
+                const angleOuter = (i * Math.PI) / 2;
+                const angleInner = angleOuter + Math.PI / 4;
+                if (i === 0) {
+                    ctx.moveTo(Math.cos(angleOuter) * outer, Math.sin(angleOuter) * outer);
+                } else {
+                    ctx.lineTo(Math.cos(angleOuter) * outer, Math.sin(angleOuter) * outer);
+                }
+                ctx.lineTo(Math.cos(angleInner) * inner, Math.sin(angleInner) * inner);
+            }
             ctx.closePath();
             ctx.fill();
         }
 
         function launchConfetti(options = {}) {
-            const count = options.particleCount || 75;
+            const count = options.particleCount || 70;
             const originX = (options.originX !== undefined ? options.originX : 0.5) * confettiCanvas.width;
             const originY = (options.originY !== undefined ? options.originY : 0.5) * confettiCanvas.height;
             const palette = options.customColor 
-                ? [options.customColor, '#fff1f2', '#fde68a'] 
-                : ['#fb7185', '#fda4af', '#f43f5e', '#fde68a', '#f472b6', '#ffffff'];
+                ? [options.customColor, '#fde68a', '#ffffff'] 
+                : ['#fde68a', '#fbbf24', '#c4b5fd', '#fdba74', '#a78bfa', '#ffffff'];
 
             for (let i = 0; i < count; i++) {
                 const angle = Math.random() * Math.PI * 2;
-                const velocity = 3.5 + Math.random() * 10;
+                const velocity = 3.5 + Math.random() * 9.5;
                 confettiParticles.push({
                     x: originX,
                     y: originY,
                     vx: Math.cos(angle) * velocity,
-                    vy: Math.sin(angle) * velocity - 4,
-                    size: 8 + Math.random() * 7,
+                    vy: Math.sin(angle) * velocity - 3.8,
+                    size: 7 + Math.random() * 7,
                     color: palette[Math.floor(Math.random() * palette.length)],
                     rotation: Math.random() * 360,
-                    rotationSpeed: (Math.random() - 0.5) * 8,
-                    gravity: 0.18,
+                    rotationSpeed: (Math.random() - 0.5) * 7,
+                    gravity: 0.16,
                     drag: 0.985,
                     opacity: 1,
-                    shape: Math.random() > 0.28 ? 'heart' : 'sparkle'
+                    shape: Math.random() > 0.3 ? 'star' : 'orb'
                 });
             }
 
@@ -1275,8 +1284,8 @@
                 confettiCtx.rotate((p.rotation * Math.PI) / 180);
                 confettiCtx.fillStyle = p.color;
 
-                if (p.shape === 'heart') {
-                    drawHeartParticle(confettiCtx, p.size);
+                if (p.shape === 'star') {
+                    drawStarSparkleParticle(confettiCtx, p.size);
                 } else {
                     confettiCtx.beginPath();
                     confettiCtx.arc(0, 0, p.size / 3, 0, Math.PI * 2);
@@ -1292,13 +1301,13 @@
             }
         }
 
-        function triggerHeartShower() {
-            launchConfetti({ particleCount: 60, originX: 0.25, originY: 0.5 });
+        function triggerSparkleShower() {
+            launchConfetti({ particleCount: 55, originX: 0.25, originY: 0.5 });
             setTimeout(() => {
-                launchConfetti({ particleCount: 60, originX: 0.75, originY: 0.5 });
+                launchConfetti({ particleCount: 55, originX: 0.75, originY: 0.5 });
             }, 180);
             setTimeout(() => {
-                launchConfetti({ particleCount: 80, originX: 0.5, originY: 0.35 });
+                launchConfetti({ particleCount: 75, originX: 0.5, originY: 0.35 });
             }, 350);
         }
 
