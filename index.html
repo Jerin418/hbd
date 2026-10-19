@@ -51,44 +51,44 @@
     </script>
 
     <style>
-        /* Custom Starlit Midnight & Warm Amber/Lavender Theme */
+        /* Custom Starlit Midnight Rose & Champagne Gold Theme */
         :root {
             --starlight-gold: #fde68a;
             --warm-amber: #fbbf24;
-            --soft-lavender: #c4b5fd;
-            --midnight-navy: #090b16;
+            --soft-rose: #fda4af;
+            --midnight-rose: #180611;
         }
 
         body {
-            background-color: #090b16;
+            background-color: #180611;
             background-image: 
-                radial-gradient(at 15% 15%, rgba(99, 102, 241, 0.16) 0px, transparent 48%),
-                radial-gradient(at 85% 20%, rgba(168, 85, 247, 0.13) 0px, transparent 50%),
-                radial-gradient(at 50% 58%, rgba(251, 191, 36, 0.09) 0px, transparent 55%),
-                radial-gradient(at 80% 88%, rgba(251, 146, 60, 0.11) 0px, transparent 48%);
+                radial-gradient(at 15% 15%, rgba(244, 63, 94, 0.25) 0px, transparent 50%),
+                radial-gradient(at 85% 20%, rgba(236, 72, 153, 0.22) 0px, transparent 52%),
+                radial-gradient(at 50% 58%, rgba(251, 113, 133, 0.16) 0px, transparent 55%),
+                radial-gradient(at 80% 88%, rgba(251, 191, 36, 0.14) 0px, transparent 50%);
             background-attachment: fixed;
-            color: #f8fafc;
+            color: #fff1f2;
             overflow-x: hidden;
         }
 
         /* Glassmorphism Utilities */
         .glass-card {
-            background: rgba(255, 255, 255, 0.035);
+            background: rgba(255, 241, 242, 0.045);
             backdrop-filter: blur(18px);
             -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(253, 230, 138, 0.14);
-            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(253, 164, 175, 0.2);
+            box-shadow: 0 24px 60px rgba(15, 2, 10, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.14);
         }
 
         .glass-pill {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 241, 242, 0.065);
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(196, 181, 253, 0.2);
+            border: 1px solid rgba(253, 164, 175, 0.26);
         }
 
-        /* Animated Starlight Gold & Lavender Shimmer Text */
+        /* Animated Starlight Gold & Rose-Blush Shimmer Text */
         .text-gradient-starlight {
-            background: linear-gradient(to right, #fde68a, #fbbf24, #c4b5fd, #fdba74, #fde68a);
+            background: linear-gradient(to right, #fde68a, #fda4af, #f472b6, #fbbf24, #fde68a);
             background-size: 200% auto;
             color: transparent;
             -webkit-background-clip: text;
@@ -182,8 +182,8 @@
         }
         .kind-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(251, 191, 36, 0.45);
-            box-shadow: 0 20px 45px rgba(251, 191, 36, 0.12);
+            border-color: rgba(251, 113, 133, 0.5);
+            box-shadow: 0 20px 45px rgba(244, 63, 94, 0.16);
         }
 
         /* Floating Sky Lanterns / Stars in Hero */
@@ -218,18 +218,18 @@
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #090b16;
+            background: #180611;
         }
         ::-webkit-scrollbar-thumb {
-            background: #312e81;
+            background: #881337;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #fbbf24;
+            background: #fb7185;
         }
     </style>
 </head>
-<body class="min-h-screen selection:bg-amber-400 selection:text-slate-950 relative">
+<body class="min-h-screen selection:bg-rose-400 selection:text-slate-950 relative">
 
     <!-- Fullscreen Starlight & Gold Sparkle Canvas -->
     <canvas id="confetti-canvas" class="fixed inset-0 pointer-events-none z-50 w-full h-full"></canvas>
@@ -237,33 +237,33 @@
     <!-- Subtle Ambient Twinkling Stars Background -->
     <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div class="w-1.5 h-1.5 rounded-full bg-amber-200 absolute top-[14%] left-[22%] animate-twinkle"></div>
-        <div class="w-1 h-1 rounded-full bg-indigo-300 absolute top-[28%] right-[18%] animate-twinkle" style="animation-delay: 1.2s"></div>
+        <div class="w-1 h-1 rounded-full bg-rose-300 absolute top-[28%] right-[18%] animate-twinkle" style="animation-delay: 1.2s"></div>
         <div class="w-2 h-2 rounded-full bg-amber-100 absolute top-[65%] left-[12%] animate-twinkle" style="animation-delay: 2.5s"></div>
-        <div class="w-1.5 h-1.5 rounded-full bg-violet-200 absolute top-[75%] right-[24%] animate-twinkle" style="animation-delay: 0.7s"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-pink-200 absolute top-[75%] right-[24%] animate-twinkle" style="animation-delay: 0.7s"></div>
         <div class="w-1 h-1 rounded-full bg-amber-200 absolute top-[42%] left-[82%] animate-twinkle" style="animation-delay: 1.9s"></div>
-        <div class="w-1.5 h-1.5 rounded-full bg-orange-200 absolute top-[19%] left-[68%] animate-twinkle" style="animation-delay: 3.1s"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-rose-200 absolute top-[19%] left-[68%] animate-twinkle" style="animation-delay: 3.1s"></div>
     </div>
 
     <!-- Floating Navigation & Quick Actions -->
     <header class="fixed top-0 left-0 right-0 z-40 px-4 py-3 sm:px-8 sm:py-4 flex justify-between items-center pointer-events-none">
         <!-- Starlit Badge -->
         <div class="glass-pill px-4 py-2 rounded-full flex items-center gap-2.5 pointer-events-auto shadow-lg">
-            <span class="w-2 h-2 rounded-full bg-amber-300 animate-ping"></span>
+            <span class="w-2 h-2 rounded-full bg-rose-300 animate-ping"></span>
             <i data-lucide="moon-star" class="w-3.5 h-3.5 text-amber-300"></i>
-            <span class="text-xs sm:text-sm font-medium tracking-wide text-slate-100" id="nav-badge-text">Birthday Edition ✨</span>
+            <span class="text-xs sm:text-sm font-medium tracking-wide text-rose-50" id="nav-badge-text">Birthday Edition ✨</span>
         </div>
 
         <!-- Quick Controls -->
         <div class="flex items-center gap-2.5 pointer-events-auto">
             <!-- Music Box Melody Toggle Button -->
-            <button id="header-music-btn" onclick="toggleBirthdayMelody()" class="glass-pill hover:bg-amber-400/15 text-slate-100 px-3.5 py-2 rounded-full flex items-center gap-2 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Play Music Box Melody">
+            <button id="header-music-btn" onclick="toggleBirthdayMelody()" class="glass-pill hover:bg-rose-400/20 text-rose-50 px-3.5 py-2 rounded-full flex items-center gap-2 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Play Music Box Melody">
                 <i data-lucide="music" class="w-4 h-4 text-amber-300"></i>
                 <span id="music-btn-label" class="hidden sm:inline">Play Melody</span>
             </button>
 
             <!-- Sparkle Burst Button -->
-            <button onclick="triggerSparkleShower()" class="glass-pill hover:bg-violet-400/15 text-slate-100 p-2 sm:px-3.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Send Starlight Sparkles">
-                <i data-lucide="sparkles" class="w-4 h-4 text-violet-300"></i>
+            <button onclick="triggerSparkleShower()" class="glass-pill hover:bg-pink-400/20 text-rose-50 p-2 sm:px-3.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium transition-all active:scale-95 shadow-lg" title="Send Starlight Sparkles">
+                <i data-lucide="sparkles" class="w-4 h-4 text-rose-300"></i>
                 <span class="hidden md:inline">Sparkles</span>
             </button>
         </div>
@@ -300,17 +300,17 @@
                 </svg>
             </div>
 
-            <!-- Glowing Star 2 (Right Top - Soft Lavender Star) -->
-            <div onclick="popSkyLantern(this, event, 1, '#c4b5fd')" class="sky-lantern animate-float-medium right-[6%] top-[15%] sm:right-[12%] sm:top-[18%]" title="Tap for a little note!">
-                <svg class="w-16 h-24 sm:w-22 sm:h-28 drop-shadow-[0_0_24px_rgba(196,181,253,0.55)]" viewBox="0 0 100 120" fill="none">
-                    <path d="M50 10 L61 38 L91 41 L68 60 L75 90 L50 74 L25 90 L32 60 L9 41 L39 38 Z" fill="url(#starGrad2)" stroke="#ede9fe" stroke-width="1.5"/>
+            <!-- Glowing Star 2 (Right Top - Soft Rose-Blush Star) -->
+            <div onclick="popSkyLantern(this, event, 1, '#fda4af')" class="sky-lantern animate-float-medium right-[6%] top-[15%] sm:right-[12%] sm:top-[18%]" title="Tap for a little note!">
+                <svg class="w-16 h-24 sm:w-22 sm:h-28 drop-shadow-[0_0_24px_rgba(253,164,175,0.55)]" viewBox="0 0 100 120" fill="none">
+                    <path d="M50 10 L61 38 L91 41 L68 60 L75 90 L50 74 L25 90 L32 60 L9 41 L39 38 Z" fill="url(#starGrad2)" stroke="#ffe4e6" stroke-width="1.5"/>
                     <circle cx="50" cy="52" r="10" fill="#ffffff" opacity="0.5"/>
-                    <path d="M50 90 Q 54 104, 48 116" stroke="rgba(221,214,254,0.45)" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+                    <path d="M50 90 Q 54 104, 48 116" stroke="rgba(254,205,211,0.45)" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
                     <defs>
                         <radialGradient id="starGrad2" cx="45%" cy="40%" r="65%">
-                            <stop offset="0%" stop-color="#f5f3ff"/>
-                            <stop offset="55%" stop-color="#a78bfa"/>
-                            <stop offset="100%" stop-color="#5b21b6"/>
+                            <stop offset="0%" stop-color="#fff1f2"/>
+                            <stop offset="55%" stop-color="#fb7185"/>
+                            <stop offset="100%" stop-color="#9f1239"/>
                         </radialGradient>
                     </defs>
                 </svg>
@@ -354,61 +354,61 @@
         <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
             
             <!-- Top Subtle Pill Tag -->
-            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill text-amber-200 text-xs sm:text-sm font-medium mb-7 border border-amber-300/25 shadow-inner">
+            <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-pill text-amber-200 text-xs sm:text-sm font-medium mb-7 border border-rose-300/30 shadow-inner">
                 <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
                 <span id="hero-badge-display" class="tracking-wider uppercase text-xs font-semibold">A Little Birthday Surprise</span>
-                <span class="px-2.5 py-0.5 text-xs font-bold bg-gradient-to-r from-amber-300 to-violet-300 text-slate-950 rounded-full" id="hero-tag-pill">ONE OF A KIND</span>
+                <span class="px-2.5 py-0.5 text-xs font-bold bg-gradient-to-r from-amber-300 to-rose-300 text-slate-950 rounded-full" id="hero-tag-pill">ONE OF A KIND</span>
             </div>
 
             <!-- Main Animated Greeting Heading -->
             <h1 class="font-serif text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight leading-[1.1] mb-6">
                 Happy Birthday,<br/>
-                <span id="crush-name-display" class="text-gradient-starlight italic font-normal drop-shadow-[0_5px_30px_rgba(251,191,36,0.3)]">Sona</span>
+                <span id="crush-name-display" class="text-gradient-starlight italic font-normal drop-shadow-[0_5px_30px_rgba(244,63,94,0.35)]">Sona</span>
             </h1>
 
             <!-- Hero Subtitle -->
-            <p id="hero-subtitle-display" class="text-base sm:text-xl md:text-2xl text-slate-200/85 max-w-2xl font-light leading-relaxed mb-10 px-2">
+            <p id="hero-subtitle-display" class="text-base sm:text-xl md:text-2xl text-rose-100/85 max-w-2xl font-light leading-relaxed mb-10 px-2">
                 To someone who makes ordinary days feel a little brighter. Here’s a small corner of the internet made just to celebrate you today.
             </p>
 
             <!-- Hero Action Buttons -->
             <div class="flex flex-wrap justify-center items-center gap-4 sm:gap-5">
-                <button onclick="startCelebrationExperience()" class="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-amber-400 via-amber-300 to-violet-300 text-slate-950 font-semibold text-base sm:text-lg shadow-[0_0_35px_rgba(251,191,36,0.35)] hover:shadow-[0_0_50px_rgba(251,191,36,0.6)] hover:scale-105 active:scale-95 transition-all duration-300">
+                <button onclick="startCelebrationExperience()" class="group relative inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-amber-300 via-rose-300 to-pink-300 text-slate-950 font-semibold text-base sm:text-lg shadow-[0_0_35px_rgba(244,63,94,0.35)] hover:shadow-[0_0_50px_rgba(244,63,94,0.6)] hover:scale-105 active:scale-95 transition-all duration-300">
                     <i data-lucide="music" class="w-5 h-5 group-hover:rotate-12 transition-transform"></i>
                     <span id="hero-party-btn-text">Play Birthday Melody & Sparkles</span>
                 </button>
 
-                <a href="#cake-section" class="inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl glass-card hover:bg-white/10 text-slate-100 font-medium text-base sm:text-lg transition-all hover:scale-105 active:scale-95">
+                <a href="#cake-section" class="inline-flex items-center gap-2.5 px-6 py-4 rounded-2xl glass-card hover:bg-white/10 text-rose-50 font-medium text-base sm:text-lg transition-all hover:scale-105 active:scale-95">
                     <span>Make a Birthday Wish</span>
                     <i data-lucide="flame" class="w-5 h-5 text-amber-300"></i>
                 </a>
             </div>
 
             <!-- Interactive Hint -->
-            <p class="mt-9 text-xs text-slate-300/60 flex items-center gap-1.5">
+            <p class="mt-9 text-xs text-rose-200/65 flex items-center gap-1.5">
                 <i data-lucide="mouse-pointer-click" class="w-3.5 h-3.5 text-amber-300"></i>
                 <span>Psst: Tap any floating lantern or star around you!</span>
             </p>
         </div>
 
         <!-- Scroll Down Indicator -->
-        <a href="#cake-section" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-400 hover:text-white transition-colors flex flex-col items-center gap-1 text-xs">
+        <a href="#cake-section" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-rose-200/60 hover:text-white transition-colors flex flex-col items-center gap-1 text-xs">
             <span>Scroll Down</span>
             <i data-lucide="chevron-down" class="w-5 h-5 animate-bounce text-amber-300"></i>
         </a>
     </section>
 
     <!-- ========================================== -->
-    <!-- 2. INTERACTIVE MIDNIGHT & GOLD CAKE        -->
+    <!-- 2. INTERACTIVE MIDNIGHT ROSE & GOLD CAKE   -->
     <!-- ========================================== -->
     <section id="cake-section" class="py-20 sm:py-28 px-4 relative">
         <div class="max-w-4xl mx-auto">
             
             <!-- Section Header -->
             <div class="text-center mb-10">
-                <span class="text-xs font-semibold uppercase tracking-widest text-amber-300 bg-amber-400/10 border border-amber-300/25 px-3.5 py-1.5 rounded-full">Make A Wish ✨</span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-amber-200 bg-rose-500/15 border border-rose-300/30 px-3.5 py-1.5 rounded-full">Make A Wish ✨</span>
                 <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-3">Time for Birthday Candles</h2>
-                <p id="cake-instruction-text" class="text-slate-300/80 text-sm sm:text-base max-w-lg mx-auto">
+                <p id="cake-instruction-text" class="text-rose-100/80 text-sm sm:text-base max-w-lg mx-auto">
                     Make a wish and tap the flames—or click <span class="text-amber-200 font-medium">"Use Mic to Blow"</span> and blow gently to see what's waiting!
                 </p>
             </div>
@@ -416,32 +416,32 @@
             <!-- Cake Glass Stage -->
             <div class="glass-card rounded-3xl p-6 sm:p-12 flex flex-col items-center relative overflow-hidden">
                 
-                <!-- Ambient Warm Gold-Indigo Glow (Dims when candles are blown out) -->
-                <div id="cake-ambient-glow" class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-amber-400/15 blur-3xl absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none transition-opacity duration-1000"></div>
+                <!-- Ambient Warm Rose-Gold Glow (Dims when candles are blown out) -->
+                <div id="cake-ambient-glow" class="w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-rose-400/20 blur-3xl absolute top-8 left-1/2 -translate-x-1/2 pointer-events-none transition-opacity duration-1000"></div>
 
                 <!-- Candle Counter Pill -->
-                <div class="relative z-10 mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-950/60 border border-amber-300/20 text-xs sm:text-sm text-amber-200">
+                <div class="relative z-10 mb-6 flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-950/70 border border-rose-300/25 text-xs sm:text-sm text-amber-200">
                     <i data-lucide="flame" class="w-4 h-4 text-amber-400"></i>
                     <span id="candles-status-label">5 of 5 Candles Glowing</span>
                 </div>
 
-                <!-- Interactive SVG Midnight-Vanilla & Gold-Drip Cake -->
+                <!-- Interactive SVG Rose-Velvet & Gold-Drip Cake -->
                 <div class="relative z-10 w-full max-w-md flex justify-center my-2 select-none">
                     <svg viewBox="0 0 400 330" class="w-full h-auto max-h-[350px] overflow-visible">
                         <defs>
-                            <!-- Midnight & Vanilla-Gold Cake Gradients -->
+                            <!-- Rose-Velvet & Champagne-Gold Cake Gradients -->
                             <linearGradient id="spongeTop" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#312e81"/>
-                                <stop offset="50%" stop-color="#4338ca"/>
-                                <stop offset="100%" stop-color="#1e1b4b"/>
+                                <stop offset="0%" stop-color="#881337"/>
+                                <stop offset="50%" stop-color="#9f1239"/>
+                                <stop offset="100%" stop-color="#4c0519"/>
                             </linearGradient>
                             <linearGradient id="spongeBottom" x1="0%" y1="0%" x2="100%" y2="0%">
-                                <stop offset="0%" stop-color="#1e1b4b"/>
-                                <stop offset="50%" stop-color="#312e81"/>
-                                <stop offset="100%" stop-color="#0f172a"/>
+                                <stop offset="0%" stop-color="#4c0519"/>
+                                <stop offset="50%" stop-color="#881337"/>
+                                <stop offset="100%" stop-color="#2e0210"/>
                             </linearGradient>
                             <linearGradient id="icingGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                <stop offset="0%" stop-color="#fffbeb"/>
+                                <stop offset="0%" stop-color="#fff1f2"/>
                                 <stop offset="55%" stop-color="#fde68a"/>
                                 <stop offset="100%" stop-color="#f59e0b"/>
                             </linearGradient>
@@ -464,21 +464,21 @@
                             <!-- Crescent Moon -->
                             <path d="M206 10 C190 12 182 28 190 41 C197 52 213 54 222 45 C210 47 200 39 200 27 C200 18 203 13 206 10 Z" fill="#fde68a" filter="drop-shadow(0 0 12px rgba(251,191,36,0.75))"/>
                             <!-- Little Accompanying Star -->
-                            <path d="M218 16 L220 21 L225 23 L220 25 L218 30 L216 25 L211 23 L216 21 Z" fill="#c4b5fd"/>
+                            <path d="M218 16 L220 21 L225 23 L220 25 L218 30 L216 25 L211 23 L216 21 Z" fill="#fda4af"/>
                         </g>
 
                         <!-- Cake Stand / Silver-Gold Plate -->
                         <ellipse cx="200" cy="305" rx="160" ry="15" fill="rgba(0,0,0,0.55)"/>
                         <path d="M55 292 L345 292 C355 292 355 304 345 304 L55 304 C45 304 45 292 55 292 Z" fill="url(#goldPlateGrad)"/>
 
-                        <!-- Bottom Tier Layer (Midnight Indigo Velvet) -->
-                        <rect x="75" y="205" width="250" height="87" rx="14" fill="url(#spongeBottom)" stroke="rgba(253,230,138,0.2)" stroke-width="1"/>
+                        <!-- Bottom Tier Layer (Midnight Rose Velvet) -->
+                        <rect x="75" y="205" width="250" height="87" rx="14" fill="url(#spongeBottom)" stroke="rgba(253,230,138,0.25)" stroke-width="1"/>
                         <!-- Bottom Tier Starlight Accents -->
                         <circle cx="115" cy="255" r="2.5" fill="#fde68a" opacity="0.85"/>
                         <path d="M200 245 L202 251 L208 253 L202 255 L200 261 L198 255 L192 253 L198 251 Z" fill="#fde68a" opacity="0.9"/>
                         <circle cx="285" cy="255" r="2.5" fill="#fde68a" opacity="0.85"/>
-                        <circle cx="155" cy="268" r="2" fill="#c4b5fd" opacity="0.75"/>
-                        <circle cx="245" cy="268" r="2" fill="#c4b5fd" opacity="0.75"/>
+                        <circle cx="155" cy="268" r="2" fill="#fda4af" opacity="0.8"/>
+                        <circle cx="245" cy="268" r="2" fill="#fda4af" opacity="0.8"/>
 
                         <!-- Bottom Tier Dripping Warm Gold & Vanilla Glaze -->
                         <path d="M75 215 
@@ -511,10 +511,10 @@
                                  Q132 172 120 150
                                  Q112 142 105 154 Z" fill="url(#icingGrad)"/>
 
-                        <!-- Lavender & Gold Sprinkles on Top -->
-                        <circle cx="140" cy="137" r="3" fill="#a78bfa"/>
+                        <!-- Rose & Gold Sprinkles on Top -->
+                        <circle cx="140" cy="137" r="3" fill="#fb7185"/>
                         <circle cx="178" cy="140" r="3" fill="#f59e0b"/>
-                        <circle cx="222" cy="136" r="3" fill="#a78bfa"/>
+                        <circle cx="222" cy="136" r="3" fill="#fb7185"/>
                         <circle cx="260" cy="139" r="3" fill="#f59e0b"/>
 
                         <!-- ================= 5 INTERACTIVE CANDLES ================= -->
@@ -537,7 +537,7 @@
                         <!-- Candle 2 -->
                         <g class="cursor-pointer" onclick="extinguishCandle(1)">
                             <rect x="161" y="78" width="12" height="54" rx="4" fill="#f8fafc"/>
-                            <path d="M161 90 L173 98 M161 106 L173 114" stroke="#a78bfa" stroke-width="3"/>
+                            <path d="M161 90 L173 98 M161 106 L173 114" stroke="#fb7185" stroke-width="3"/>
                             <line x1="167" y1="72" x2="167" y2="78" stroke="#475569" stroke-width="2"/>
                             <circle id="smoke-1" cx="167" cy="64" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-1" class="flame-wrapper">
@@ -569,7 +569,7 @@
                         <!-- Candle 4 -->
                         <g class="cursor-pointer" onclick="extinguishCandle(3)">
                             <rect x="227" y="78" width="12" height="54" rx="4" fill="#f8fafc"/>
-                            <path d="M227 90 L239 98 M227 106 L239 114" stroke="#a78bfa" stroke-width="3"/>
+                            <path d="M227 90 L239 98 M227 106 L239 114" stroke="#fb7185" stroke-width="3"/>
                             <line x1="233" y1="72" x2="233" y2="78" stroke="#475569" stroke-width="2"/>
                             <circle id="smoke-3" cx="233" cy="64" r="6" fill="#cbd5e1" class="smoke-puff"/>
                             <g id="flame-3" class="flame-wrapper">
@@ -602,12 +602,12 @@
 
                 <!-- Interactive Cake Buttons -->
                 <div class="relative z-10 flex flex-wrap justify-center items-center gap-3.5 mt-4">
-                    <button id="blow-candles-btn" onclick="blowOutAllCandles()" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-300 via-amber-400 to-violet-300 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-amber-500/20 transition-all hover:scale-105 active:scale-95">
+                    <button id="blow-candles-btn" onclick="blowOutAllCandles()" class="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-300 via-rose-300 to-pink-300 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-rose-500/20 transition-all hover:scale-105 active:scale-95">
                         <i data-lucide="wind" class="w-5 h-5"></i>
                         <span>Blow Out Candles</span>
                     </button>
 
-                    <button id="mic-blow-btn" onclick="toggleMicBlowDetection()" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl glass-pill hover:bg-white/10 text-slate-100 font-medium text-sm sm:text-base transition-all active:scale-95">
+                    <button id="mic-blow-btn" onclick="toggleMicBlowDetection()" class="inline-flex items-center gap-2 px-5 py-3.5 rounded-2xl glass-pill hover:bg-white/10 text-rose-50 font-medium text-sm sm:text-base transition-all active:scale-95">
                         <i data-lucide="mic" class="w-4 h-4 text-amber-300"></i>
                         <span id="mic-btn-label">Use Mic to Blow</span>
                     </button>
@@ -619,15 +619,15 @@
                 </div>
 
                 <!-- Hidden Subtle & Hopeful Birthday Wish Reveal Banner -->
-                <div id="special-wish-reveal" class="hidden w-full max-w-2xl mt-8 pt-8 border-t border-amber-300/20 text-center transition-all duration-700">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-400/15 border border-amber-300/30 text-amber-200 text-xs font-semibold mb-3">
+                <div id="special-wish-reveal" class="hidden w-full max-w-2xl mt-8 pt-8 border-t border-rose-300/25 text-center transition-all duration-700">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-400/15 border border-rose-300/30 text-amber-200 text-xs font-semibold mb-3">
                         <i data-lucide="sparkles" class="w-3.5 h-3.5 text-amber-300"></i>
                         <span>BIRTHDAY WISH UNLOCKED</span>
                     </div>
-                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-violet-200 to-amber-100 mb-3">
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-rose-200 to-amber-100 mb-3">
                         Here's To Your Next Chapter...
                     </h3>
-                    <p id="hidden-wish-display" class="text-slate-200/90 text-base sm:text-lg leading-relaxed italic font-editorial text-xl px-4">
+                    <p id="hidden-wish-display" class="text-rose-100/90 text-base sm:text-lg leading-relaxed italic font-editorial text-xl px-4">
                         "May all your secret wishes come true this year... (and maybe one of mine too ✨)."
                     </p>
                 </div>
@@ -643,9 +643,9 @@
         <div class="max-w-5xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-12">
-                <span class="text-xs font-semibold uppercase tracking-widest text-violet-300 bg-violet-500/15 border border-violet-400/25 px-3.5 py-1.5 rounded-full">Small Appreciation</span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-rose-200 bg-rose-500/15 border border-rose-400/30 px-3.5 py-1.5 rounded-full">Small Appreciation</span>
                 <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-3">Why You're One of a Kind</h2>
-                <p class="text-slate-300/75 text-sm sm:text-base max-w-lg mx-auto">
+                <p class="text-rose-100/75 text-sm sm:text-base max-w-lg mx-auto">
                     Just a few things that make you stand out without even trying.
                 </p>
             </div>
@@ -665,9 +665,9 @@
             
             <!-- Section Header -->
             <div class="text-center mb-10">
-                <span class="text-xs font-semibold uppercase tracking-widest text-amber-200 bg-amber-400/10 border border-amber-300/25 px-3.5 py-1.5 rounded-full">Before You Go ✨</span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-amber-200 bg-rose-500/15 border border-rose-300/30 px-3.5 py-1.5 rounded-full">Before You Go ✨</span>
                 <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-4 mb-2">A Little Note For You</h2>
-                <p class="text-slate-300/75 text-sm sm:text-base">Tap the star-sealed card below to flip it open.</p>
+                <p class="text-rose-100/75 text-sm sm:text-base">Tap the star-sealed card below to flip it open.</p>
             </div>
 
             <!-- 3D Flip Card Container -->
@@ -675,16 +675,16 @@
                 <div id="greeting-flip-card" class="flip-card-inner">
                     
                     <!-- FRONT OF CARD (Starlit Wax-Sealed Envelope) -->
-                    <div class="flip-card-front glass-card p-8 sm:p-12 flex flex-col justify-between items-center text-center border-2 border-amber-300/25 bg-gradient-to-br from-slate-900/90 via-[#0e1124]/95 to-indigo-950/85">
-                        <div class="w-full flex justify-between items-center text-xs text-slate-300/70 uppercase tracking-widest">
+                    <div class="flip-card-front glass-card p-8 sm:p-12 flex flex-col justify-between items-center text-center border-2 border-rose-300/30 bg-gradient-to-br from-[#28091a]/95 via-[#1c0613]/95 to-rose-950/90">
+                        <div class="w-full flex justify-between items-center text-xs text-rose-200/70 uppercase tracking-widest">
                             <span>Starlight Post</span>
                             <span>Special Delivery ✦</span>
                         </div>
 
                         <!-- Glowing Star Wax Seal Centerpiece -->
                         <div class="my-auto flex flex-col items-center">
-                            <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-amber-500 via-amber-300 to-violet-400 p-0.5 shadow-[0_0_45px_rgba(251,191,36,0.45)] animate-pulse-glow mb-6 flex items-center justify-center">
-                                <div class="w-full h-full rounded-full bg-slate-950/75 backdrop-blur-sm flex items-center justify-center border border-amber-200/40">
+                            <div class="w-24 h-24 rounded-full bg-gradient-to-tr from-amber-400 via-rose-400 to-pink-400 p-0.5 shadow-[0_0_45px_rgba(244,63,94,0.45)] animate-pulse-glow mb-6 flex items-center justify-center">
+                                <div class="w-full h-full rounded-full bg-[#1a0510]/85 backdrop-blur-sm flex items-center justify-center border border-amber-200/40">
                                     <i data-lucide="sparkles" class="w-10 h-10 text-amber-200"></i>
                                 </div>
                             </div>
@@ -692,35 +692,35 @@
                             <h3 class="font-handwriting text-4xl sm:text-5xl text-white font-bold" id="envelope-recipient-name">For Sona</h3>
                         </div>
 
-                        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-amber-400/15 border border-amber-300/30 hover:bg-amber-400/25 text-amber-100 text-sm font-medium transition">
+                        <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-rose-400/15 border border-rose-300/35 hover:bg-rose-400/25 text-amber-100 text-sm font-medium transition">
                             <i data-lucide="mail-open" class="w-4 h-4 text-amber-300"></i>
                             <span>Tap to Open Your Note ✨</span>
                         </div>
                     </div>
 
                     <!-- BACK OF CARD (Opened Note Inside) -->
-                    <div class="flip-card-back glass-card p-7 sm:p-11 flex flex-col justify-between border-2 border-amber-300/35 bg-gradient-to-br from-[#0e1226]/95 via-slate-900/95 to-indigo-950/95 overflow-y-auto">
+                    <div class="flip-card-back glass-card p-7 sm:p-11 flex flex-col justify-between border-2 border-rose-300/35 bg-gradient-to-br from-[#260818]/95 via-[#1a0511]/95 to-rose-950/95 overflow-y-auto">
                         <div>
-                            <div class="flex justify-between items-start border-b border-amber-300/15 pb-4 mb-5">
+                            <div class="flex justify-between items-start border-b border-rose-300/20 pb-4 mb-5">
                                 <div>
-                                    <span class="text-xs uppercase tracking-widest text-violet-300 font-semibold block">A Birthday Note</span>
+                                    <span class="text-xs uppercase tracking-widest text-rose-300 font-semibold block">A Birthday Note</span>
                                     <h3 id="card-salutation-display" class="font-handwriting text-3xl sm:text-4xl text-amber-200 mt-1">Hey Sona,</h3>
                                 </div>
                                 <i data-lucide="moon-star" class="w-6 h-6 text-amber-300 shrink-0"></i>
                             </div>
 
                             <!-- Main Personal Letter Body -->
-                            <p id="card-message-body" class="text-slate-100/95 text-sm sm:text-base leading-relaxed whitespace-pre-line font-light">
+                            <p id="card-message-body" class="text-rose-50/95 text-sm sm:text-base leading-relaxed whitespace-pre-line font-light">
                                <!-- Populated via Config -->
                             </p>
                         </div>
 
-                        <div class="pt-5 mt-5 border-t border-amber-300/15 flex justify-between items-end">
+                        <div class="pt-5 mt-5 border-t border-rose-300/20 flex justify-between items-end">
                             <div>
-                                <span class="text-xs text-slate-400 block">Wishing you the best,</span>
+                                <span class="text-xs text-rose-200/70 block">Wishing you the best,</span>
                                 <span id="card-sender-display" class="font-handwriting text-2xl sm:text-3xl text-amber-300 font-bold">Someone Glad to Know You</span>
                             </div>
-                            <span class="text-xs text-slate-400 flex items-center gap-1">
+                            <span class="text-xs text-rose-200/70 flex items-center gap-1">
                                 <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Tap to flip back
                             </span>
                         </div>
@@ -733,14 +733,14 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-10 px-4 border-t border-slate-800/80 text-center text-xs sm:text-sm text-slate-400">
+    <footer class="py-10 px-4 border-t border-rose-900/40 text-center text-xs sm:text-sm text-rose-200/60">
         <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <p class="flex items-center gap-1.5">
                 <span>Crafted under the stars</span>
                 <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
-                <span>for <strong id="footer-crush-name" class="text-slate-200">Sona</strong></span>
+                <span>for <strong id="footer-crush-name" class="text-rose-100">Sona</strong></span>
             </p>
-            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-slate-200 transition flex items-center gap-1">
+            <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="hover:text-rose-100 transition flex items-center gap-1">
                 <span>Back to top</span>
                 <i data-lucide="arrow-up" class="w-4 h-4"></i>
             </button>
@@ -748,7 +748,7 @@
     </footer>
 
     <!-- Custom Toast Notification -->
-    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-pill bg-slate-950/95 border border-amber-300/35 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-sm text-slate-100">
+    <div id="toast-notification" class="fixed bottom-5 right-5 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300 glass-pill bg-[#1f0613]/95 border border-rose-300/35 px-4 py-3 rounded-2xl shadow-2xl flex items-center gap-2.5 text-sm text-rose-50">
         <i data-lucide="sparkles" class="w-4 h-4 text-amber-300"></i>
         <span id="toast-message">Sparkles sent!</span>
     </div>
@@ -848,18 +848,18 @@
             const grid = document.getElementById('kind-cards-grid');
             grid.innerHTML = cfg.oneOfAKindCards.map((item, idx) => `
                 <div onclick="triggerKindCard(${idx})" class="kind-card glass-card rounded-3xl p-7 cursor-pointer flex flex-col justify-between relative overflow-hidden group select-none">
-                    <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-amber-400/10 blur-2xl group-hover:bg-amber-400/20 transition-all"></div>
+                    <div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-rose-400/15 blur-2xl group-hover:bg-rose-400/25 transition-all"></div>
                     <div>
-                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400/20 to-violet-400/20 border border-amber-300/30 flex items-center justify-center mb-5 text-amber-300 group-hover:scale-110 transition-transform">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-400/20 to-rose-400/25 border border-rose-300/30 flex items-center justify-center mb-5 text-amber-300 group-hover:scale-110 transition-transform">
                             <i data-lucide="${item.icon}" class="w-6 h-6"></i>
                         </div>
-                        <span class="text-[11px] uppercase tracking-widest text-violet-300/80 font-semibold">Note #0${idx + 1}</span>
+                        <span class="text-[11px] uppercase tracking-widest text-rose-300/90 font-semibold">Note #0${idx + 1}</span>
                         <h3 class="font-serif text-2xl font-bold text-white mt-1 mb-3">${item.title}</h3>
-                        <p class="text-slate-200/85 text-sm sm:text-base leading-relaxed font-light">
+                        <p class="text-rose-100/85 text-sm sm:text-base leading-relaxed font-light">
                             ${item.note}
                         </p>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-amber-200/80">
+                    <div class="mt-6 pt-4 border-t border-rose-200/15 flex items-center justify-between text-xs text-amber-200/85">
                         <span>Tap for starlight</span>
                         <i data-lucide="sparkles" class="w-4 h-4 group-hover:rotate-12 transition-all text-amber-300"></i>
                     </div>
@@ -1230,7 +1230,7 @@
             const originY = (options.originY !== undefined ? options.originY : 0.5) * confettiCanvas.height;
             const palette = options.customColor 
                 ? [options.customColor, '#fde68a', '#ffffff'] 
-                : ['#fde68a', '#fbbf24', '#c4b5fd', '#fdba74', '#a78bfa', '#ffffff'];
+                : ['#fde68a', '#fda4af', '#f472b6', '#fbbf24', '#fb7185', '#ffffff'];
 
             for (let i = 0; i < count; i++) {
                 const angle = Math.random() * Math.PI * 2;
